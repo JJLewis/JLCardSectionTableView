@@ -1,0 +1,580 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AAF129BA1FEFE777007A3799 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF129B91FEFE777007A3799 /* AppDelegate.swift */; };
+		AAF129BC1FEFE777007A3799 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF129BB1FEFE777007A3799 /* ViewController.swift */; };
+		AAF129BF1FEFE777007A3799 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAF129BD1FEFE777007A3799 /* Main.storyboard */; };
+		AAF129C21FEFE777007A3799 /* JLCardSectionTableViewDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AAF129C01FEFE777007A3799 /* JLCardSectionTableViewDemo.xcdatamodeld */; };
+		AAF129C41FEFE777007A3799 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAF129C31FEFE777007A3799 /* Assets.xcassets */; };
+		AAF129C71FEFE777007A3799 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAF129C51FEFE777007A3799 /* LaunchScreen.storyboard */; };
+		AAF129D21FEFE778007A3799 /* JLCardSectionTableViewDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF129D11FEFE778007A3799 /* JLCardSectionTableViewDemoTests.swift */; };
+		AAF129DD1FEFE778007A3799 /* JLCardSectionTableViewDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF129DC1FEFE778007A3799 /* JLCardSectionTableViewDemoUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AAF129CE1FEFE778007A3799 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAF129AE1FEFE777007A3799 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AAF129B51FEFE777007A3799;
+			remoteInfo = JLCardSectionTableViewDemo;
+		};
+		AAF129D91FEFE778007A3799 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAF129AE1FEFE777007A3799 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AAF129B51FEFE777007A3799;
+			remoteInfo = JLCardSectionTableViewDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AAF129B61FEFE777007A3799 /* JLCardSectionTableViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JLCardSectionTableViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAF129B91FEFE777007A3799 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AAF129BB1FEFE777007A3799 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AAF129BE1FEFE777007A3799 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AAF129C11FEFE777007A3799 /* JLCardSectionTableViewDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JLCardSectionTableViewDemo.xcdatamodel; sourceTree = "<group>"; };
+		AAF129C31FEFE777007A3799 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AAF129C61FEFE777007A3799 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AAF129C81FEFE777007A3799 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAF129CD1FEFE778007A3799 /* JLCardSectionTableViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JLCardSectionTableViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAF129D11FEFE778007A3799 /* JLCardSectionTableViewDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLCardSectionTableViewDemoTests.swift; sourceTree = "<group>"; };
+		AAF129D31FEFE778007A3799 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAF129D81FEFE778007A3799 /* JLCardSectionTableViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JLCardSectionTableViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAF129DC1FEFE778007A3799 /* JLCardSectionTableViewDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLCardSectionTableViewDemoUITests.swift; sourceTree = "<group>"; };
+		AAF129DE1FEFE778007A3799 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AAF129B31FEFE777007A3799 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAF129CA1FEFE778007A3799 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAF129D51FEFE778007A3799 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AAF129AD1FEFE777007A3799 = {
+			isa = PBXGroup;
+			children = (
+				AAF129B81FEFE777007A3799 /* JLCardSectionTableViewDemo */,
+				AAF129D01FEFE778007A3799 /* JLCardSectionTableViewDemoTests */,
+				AAF129DB1FEFE778007A3799 /* JLCardSectionTableViewDemoUITests */,
+				AAF129B71FEFE777007A3799 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AAF129B71FEFE777007A3799 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AAF129B61FEFE777007A3799 /* JLCardSectionTableViewDemo.app */,
+				AAF129CD1FEFE778007A3799 /* JLCardSectionTableViewDemoTests.xctest */,
+				AAF129D81FEFE778007A3799 /* JLCardSectionTableViewDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AAF129B81FEFE777007A3799 /* JLCardSectionTableViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				AAF129B91FEFE777007A3799 /* AppDelegate.swift */,
+				AAF129BB1FEFE777007A3799 /* ViewController.swift */,
+				AAF129BD1FEFE777007A3799 /* Main.storyboard */,
+				AAF129C31FEFE777007A3799 /* Assets.xcassets */,
+				AAF129C51FEFE777007A3799 /* LaunchScreen.storyboard */,
+				AAF129C81FEFE777007A3799 /* Info.plist */,
+				AAF129C01FEFE777007A3799 /* JLCardSectionTableViewDemo.xcdatamodeld */,
+			);
+			path = JLCardSectionTableViewDemo;
+			sourceTree = "<group>";
+		};
+		AAF129D01FEFE778007A3799 /* JLCardSectionTableViewDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				AAF129D11FEFE778007A3799 /* JLCardSectionTableViewDemoTests.swift */,
+				AAF129D31FEFE778007A3799 /* Info.plist */,
+			);
+			path = JLCardSectionTableViewDemoTests;
+			sourceTree = "<group>";
+		};
+		AAF129DB1FEFE778007A3799 /* JLCardSectionTableViewDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AAF129DC1FEFE778007A3799 /* JLCardSectionTableViewDemoUITests.swift */,
+				AAF129DE1FEFE778007A3799 /* Info.plist */,
+			);
+			path = JLCardSectionTableViewDemoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AAF129B51FEFE777007A3799 /* JLCardSectionTableViewDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAF129E11FEFE778007A3799 /* Build configuration list for PBXNativeTarget "JLCardSectionTableViewDemo" */;
+			buildPhases = (
+				AAF129B21FEFE777007A3799 /* Sources */,
+				AAF129B31FEFE777007A3799 /* Frameworks */,
+				AAF129B41FEFE777007A3799 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JLCardSectionTableViewDemo;
+			productName = JLCardSectionTableViewDemo;
+			productReference = AAF129B61FEFE777007A3799 /* JLCardSectionTableViewDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AAF129CC1FEFE778007A3799 /* JLCardSectionTableViewDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAF129E41FEFE778007A3799 /* Build configuration list for PBXNativeTarget "JLCardSectionTableViewDemoTests" */;
+			buildPhases = (
+				AAF129C91FEFE778007A3799 /* Sources */,
+				AAF129CA1FEFE778007A3799 /* Frameworks */,
+				AAF129CB1FEFE778007A3799 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AAF129CF1FEFE778007A3799 /* PBXTargetDependency */,
+			);
+			name = JLCardSectionTableViewDemoTests;
+			productName = JLCardSectionTableViewDemoTests;
+			productReference = AAF129CD1FEFE778007A3799 /* JLCardSectionTableViewDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AAF129D71FEFE778007A3799 /* JLCardSectionTableViewDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAF129E71FEFE778007A3799 /* Build configuration list for PBXNativeTarget "JLCardSectionTableViewDemoUITests" */;
+			buildPhases = (
+				AAF129D41FEFE778007A3799 /* Sources */,
+				AAF129D51FEFE778007A3799 /* Frameworks */,
+				AAF129D61FEFE778007A3799 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AAF129DA1FEFE778007A3799 /* PBXTargetDependency */,
+			);
+			name = JLCardSectionTableViewDemoUITests;
+			productName = JLCardSectionTableViewDemoUITests;
+			productReference = AAF129D81FEFE778007A3799 /* JLCardSectionTableViewDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AAF129AE1FEFE777007A3799 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Jordan Lewis";
+				TargetAttributes = {
+					AAF129B51FEFE777007A3799 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					AAF129CC1FEFE778007A3799 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AAF129B51FEFE777007A3799;
+					};
+					AAF129D71FEFE778007A3799 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AAF129B51FEFE777007A3799;
+					};
+				};
+			};
+			buildConfigurationList = AAF129B11FEFE777007A3799 /* Build configuration list for PBXProject "JLCardSectionTableViewDemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AAF129AD1FEFE777007A3799;
+			productRefGroup = AAF129B71FEFE777007A3799 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AAF129B51FEFE777007A3799 /* JLCardSectionTableViewDemo */,
+				AAF129CC1FEFE778007A3799 /* JLCardSectionTableViewDemoTests */,
+				AAF129D71FEFE778007A3799 /* JLCardSectionTableViewDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AAF129B41FEFE777007A3799 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAF129C71FEFE777007A3799 /* LaunchScreen.storyboard in Resources */,
+				AAF129C41FEFE777007A3799 /* Assets.xcassets in Resources */,
+				AAF129BF1FEFE777007A3799 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAF129CB1FEFE778007A3799 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAF129D61FEFE778007A3799 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AAF129B21FEFE777007A3799 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAF129C21FEFE777007A3799 /* JLCardSectionTableViewDemo.xcdatamodeld in Sources */,
+				AAF129BC1FEFE777007A3799 /* ViewController.swift in Sources */,
+				AAF129BA1FEFE777007A3799 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAF129C91FEFE778007A3799 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAF129D21FEFE778007A3799 /* JLCardSectionTableViewDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAF129D41FEFE778007A3799 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAF129DD1FEFE778007A3799 /* JLCardSectionTableViewDemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AAF129CF1FEFE778007A3799 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AAF129B51FEFE777007A3799 /* JLCardSectionTableViewDemo */;
+			targetProxy = AAF129CE1FEFE778007A3799 /* PBXContainerItemProxy */;
+		};
+		AAF129DA1FEFE778007A3799 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AAF129B51FEFE777007A3799 /* JLCardSectionTableViewDemo */;
+			targetProxy = AAF129D91FEFE778007A3799 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AAF129BD1FEFE777007A3799 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AAF129BE1FEFE777007A3799 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AAF129C51FEFE777007A3799 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AAF129C61FEFE777007A3799 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AAF129DF1FEFE778007A3799 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AAF129E01FEFE778007A3799 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AAF129E21FEFE778007A3799 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6F57BQCCZS;
+				INFOPLIST_FILE = JLCardSectionTableViewDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jjlewis.JLCardSectionTableViewDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AAF129E31FEFE778007A3799 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6F57BQCCZS;
+				INFOPLIST_FILE = JLCardSectionTableViewDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jjlewis.JLCardSectionTableViewDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AAF129E51FEFE778007A3799 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6F57BQCCZS;
+				INFOPLIST_FILE = JLCardSectionTableViewDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jjlewis.JLCardSectionTableViewDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JLCardSectionTableViewDemo.app/JLCardSectionTableViewDemo";
+			};
+			name = Debug;
+		};
+		AAF129E61FEFE778007A3799 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6F57BQCCZS;
+				INFOPLIST_FILE = JLCardSectionTableViewDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jjlewis.JLCardSectionTableViewDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JLCardSectionTableViewDemo.app/JLCardSectionTableViewDemo";
+			};
+			name = Release;
+		};
+		AAF129E81FEFE778007A3799 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6F57BQCCZS;
+				INFOPLIST_FILE = JLCardSectionTableViewDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jjlewis.JLCardSectionTableViewDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JLCardSectionTableViewDemo;
+			};
+			name = Debug;
+		};
+		AAF129E91FEFE778007A3799 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6F57BQCCZS;
+				INFOPLIST_FILE = JLCardSectionTableViewDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jjlewis.JLCardSectionTableViewDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JLCardSectionTableViewDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AAF129B11FEFE777007A3799 /* Build configuration list for PBXProject "JLCardSectionTableViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAF129DF1FEFE778007A3799 /* Debug */,
+				AAF129E01FEFE778007A3799 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAF129E11FEFE778007A3799 /* Build configuration list for PBXNativeTarget "JLCardSectionTableViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAF129E21FEFE778007A3799 /* Debug */,
+				AAF129E31FEFE778007A3799 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAF129E41FEFE778007A3799 /* Build configuration list for PBXNativeTarget "JLCardSectionTableViewDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAF129E51FEFE778007A3799 /* Debug */,
+				AAF129E61FEFE778007A3799 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAF129E71FEFE778007A3799 /* Build configuration list for PBXNativeTarget "JLCardSectionTableViewDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAF129E81FEFE778007A3799 /* Debug */,
+				AAF129E91FEFE778007A3799 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AAF129C01FEFE777007A3799 /* JLCardSectionTableViewDemo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AAF129C11FEFE777007A3799 /* JLCardSectionTableViewDemo.xcdatamodel */,
+			);
+			currentVersion = AAF129C11FEFE777007A3799 /* JLCardSectionTableViewDemo.xcdatamodel */;
+			path = JLCardSectionTableViewDemo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = AAF129AE1FEFE777007A3799 /* Project object */;
+}
