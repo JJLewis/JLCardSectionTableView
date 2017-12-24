@@ -15,6 +15,7 @@
 		AAF129C71FEFE777007A3799 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAF129C51FEFE777007A3799 /* LaunchScreen.storyboard */; };
 		AAF129D21FEFE778007A3799 /* JLCardSectionTableViewDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF129D11FEFE778007A3799 /* JLCardSectionTableViewDemoTests.swift */; };
 		AAF129DD1FEFE778007A3799 /* JLCardSectionTableViewDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF129DC1FEFE778007A3799 /* JLCardSectionTableViewDemoUITests.swift */; };
+		AAF12A111FEFE891007A3799 /* JLCardSectionTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAF12A121FEFE891007A3799 /* JLCardSectionTableView.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		AAF129D81FEFE778007A3799 /* JLCardSectionTableViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JLCardSectionTableViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAF129DC1FEFE778007A3799 /* JLCardSectionTableViewDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLCardSectionTableViewDemoUITests.swift; sourceTree = "<group>"; };
 		AAF129DE1FEFE778007A3799 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAF12A121FEFE891007A3799 /* JLCardSectionTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JLCardSectionTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAF12A111FEFE891007A3799 /* JLCardSectionTableView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +86,7 @@
 				AAF129D01FEFE778007A3799 /* JLCardSectionTableViewDemoTests */,
 				AAF129DB1FEFE778007A3799 /* JLCardSectionTableViewDemoUITests */,
 				AAF129B71FEFE777007A3799 /* Products */,
+				AAF12A101FEFE891007A3799 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,6 +130,14 @@
 				AAF129DE1FEFE778007A3799 /* Info.plist */,
 			);
 			path = JLCardSectionTableViewDemoUITests;
+			sourceTree = "<group>";
+		};
+		AAF12A101FEFE891007A3799 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AAF12A121FEFE891007A3799 /* JLCardSectionTableView.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

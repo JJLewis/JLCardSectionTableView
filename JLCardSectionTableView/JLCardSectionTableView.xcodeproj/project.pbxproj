@@ -10,6 +10,13 @@
 		AAF129FE1FEFE78A007A3799 /* JLCardSectionTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAF129F41FEFE78A007A3799 /* JLCardSectionTableView.framework */; };
 		AAF12A031FEFE78A007A3799 /* JLCardSectionTableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF12A021FEFE78A007A3799 /* JLCardSectionTableViewTests.swift */; };
 		AAF12A051FEFE78A007A3799 /* JLCardSectionTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = AAF129F71FEFE78A007A3799 /* JLCardSectionTableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAF12A0F1FEFE865007A3799 /* JLCardSectionTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF12A0E1FEFE865007A3799 /* JLCardSectionTableView.swift */; };
+		AAF12A171FF064A9007A3799 /* JLCSTopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF12A151FF064A9007A3799 /* JLCSTopTableViewCell.swift */; };
+		AAF12A181FF064A9007A3799 /* JLCSTopTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAF12A161FF064A9007A3799 /* JLCSTopTableViewCell.xib */; };
+		AAF12A1F1FF0652E007A3799 /* JLCSBottomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF12A1D1FF0652E007A3799 /* JLCSBottomTableViewCell.swift */; };
+		AAF12A201FF0652E007A3799 /* JLCSBottomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAF12A1E1FF0652E007A3799 /* JLCSBottomTableViewCell.xib */; };
+		AAF12A231FF0653F007A3799 /* JLCSMidTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF12A211FF0653F007A3799 /* JLCSMidTableViewCell.swift */; };
+		AAF12A241FF0653F007A3799 /* JLCSMidTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAF12A221FF0653F007A3799 /* JLCSMidTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +36,13 @@
 		AAF129FD1FEFE78A007A3799 /* JLCardSectionTableViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JLCardSectionTableViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAF12A021FEFE78A007A3799 /* JLCardSectionTableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLCardSectionTableViewTests.swift; sourceTree = "<group>"; };
 		AAF12A041FEFE78A007A3799 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAF12A0E1FEFE865007A3799 /* JLCardSectionTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLCardSectionTableView.swift; sourceTree = "<group>"; };
+		AAF12A151FF064A9007A3799 /* JLCSTopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLCSTopTableViewCell.swift; sourceTree = "<group>"; };
+		AAF12A161FF064A9007A3799 /* JLCSTopTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JLCSTopTableViewCell.xib; sourceTree = "<group>"; };
+		AAF12A1D1FF0652E007A3799 /* JLCSBottomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLCSBottomTableViewCell.swift; sourceTree = "<group>"; };
+		AAF12A1E1FF0652E007A3799 /* JLCSBottomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JLCSBottomTableViewCell.xib; sourceTree = "<group>"; };
+		AAF12A211FF0653F007A3799 /* JLCSMidTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLCSMidTableViewCell.swift; sourceTree = "<group>"; };
+		AAF12A221FF0653F007A3799 /* JLCSMidTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JLCSMidTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				AAF129F71FEFE78A007A3799 /* JLCardSectionTableView.h */,
+				AAF12A0E1FEFE865007A3799 /* JLCardSectionTableView.swift */,
+				AAF12A191FF064D0007A3799 /* Cells */,
 				AAF129F81FEFE78A007A3799 /* Info.plist */,
 			);
 			path = JLCardSectionTableView;
@@ -84,6 +100,43 @@
 				AAF12A041FEFE78A007A3799 /* Info.plist */,
 			);
 			path = JLCardSectionTableViewTests;
+			sourceTree = "<group>";
+		};
+		AAF12A191FF064D0007A3799 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AAF12A1C1FF0651D007A3799 /* Bottom */,
+				AAF12A1B1FF06518007A3799 /* Mid */,
+				AAF12A1A1FF064DA007A3799 /* Top */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		AAF12A1A1FF064DA007A3799 /* Top */ = {
+			isa = PBXGroup;
+			children = (
+				AAF12A151FF064A9007A3799 /* JLCSTopTableViewCell.swift */,
+				AAF12A161FF064A9007A3799 /* JLCSTopTableViewCell.xib */,
+			);
+			path = Top;
+			sourceTree = "<group>";
+		};
+		AAF12A1B1FF06518007A3799 /* Mid */ = {
+			isa = PBXGroup;
+			children = (
+				AAF12A211FF0653F007A3799 /* JLCSMidTableViewCell.swift */,
+				AAF12A221FF0653F007A3799 /* JLCSMidTableViewCell.xib */,
+			);
+			path = Mid;
+			sourceTree = "<group>";
+		};
+		AAF12A1C1FF0651D007A3799 /* Bottom */ = {
+			isa = PBXGroup;
+			children = (
+				AAF12A1D1FF0652E007A3799 /* JLCSBottomTableViewCell.swift */,
+				AAF12A1E1FF0652E007A3799 /* JLCSBottomTableViewCell.xib */,
+			);
+			path = Bottom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +201,7 @@
 				TargetAttributes = {
 					AAF129F31FEFE78A007A3799 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					AAF129FC1FEFE78A007A3799 = {
@@ -179,6 +233,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAF12A201FF0652E007A3799 /* JLCSBottomTableViewCell.xib in Resources */,
+				AAF12A181FF064A9007A3799 /* JLCSTopTableViewCell.xib in Resources */,
+				AAF12A241FF0653F007A3799 /* JLCSMidTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +253,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAF12A1F1FF0652E007A3799 /* JLCSBottomTableViewCell.swift in Sources */,
+				AAF12A0F1FEFE865007A3799 /* JLCardSectionTableView.swift in Sources */,
+				AAF12A231FF0653F007A3799 /* JLCSMidTableViewCell.swift in Sources */,
+				AAF12A171FF064A9007A3799 /* JLCSTopTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +395,7 @@
 		AAF12A091FEFE78A007A3799 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -347,6 +409,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jjlewis.JLCardSectionTableView;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -355,6 +418,7 @@
 		AAF12A0A1FEFE78A007A3799 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -376,6 +440,7 @@
 		AAF12A0C1FEFE78A007A3799 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6F57BQCCZS;
 				INFOPLIST_FILE = JLCardSectionTableViewTests/Info.plist;
@@ -390,6 +455,7 @@
 		AAF12A0D1FEFE78A007A3799 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6F57BQCCZS;
 				INFOPLIST_FILE = JLCardSectionTableViewTests/Info.plist;
