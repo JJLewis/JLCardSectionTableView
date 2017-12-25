@@ -17,6 +17,8 @@
 		AAF12A201FF0652E007A3799 /* JLCSBottomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAF12A1E1FF0652E007A3799 /* JLCSBottomTableViewCell.xib */; };
 		AAF12A231FF0653F007A3799 /* JLCSMidTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF12A211FF0653F007A3799 /* JLCSMidTableViewCell.swift */; };
 		AAF12A241FF0653F007A3799 /* JLCSMidTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAF12A221FF0653F007A3799 /* JLCSMidTableViewCell.xib */; };
+		AAF12A271FF0662B007A3799 /* JLRoundedShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF12A261FF0662B007A3799 /* JLRoundedShadowView.swift */; };
+		AAF12A2A1FF0663D007A3799 /* JLRoundedShadowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAF12A291FF0663D007A3799 /* JLRoundedShadowView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,8 @@
 		AAF12A1E1FF0652E007A3799 /* JLCSBottomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JLCSBottomTableViewCell.xib; sourceTree = "<group>"; };
 		AAF12A211FF0653F007A3799 /* JLCSMidTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLCSMidTableViewCell.swift; sourceTree = "<group>"; };
 		AAF12A221FF0653F007A3799 /* JLCSMidTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JLCSMidTableViewCell.xib; sourceTree = "<group>"; };
+		AAF12A261FF0662B007A3799 /* JLRoundedShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLRoundedShadowView.swift; sourceTree = "<group>"; };
+		AAF12A291FF0663D007A3799 /* JLRoundedShadowView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JLRoundedShadowView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,7 @@
 			children = (
 				AAF129F71FEFE78A007A3799 /* JLCardSectionTableView.h */,
 				AAF12A0E1FEFE865007A3799 /* JLCardSectionTableView.swift */,
+				AAF12A251FF0660B007A3799 /* Generics */,
 				AAF12A191FF064D0007A3799 /* Cells */,
 				AAF129F81FEFE78A007A3799 /* Info.plist */,
 			);
@@ -105,9 +110,9 @@
 		AAF12A191FF064D0007A3799 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				AAF12A1C1FF0651D007A3799 /* Bottom */,
-				AAF12A1B1FF06518007A3799 /* Mid */,
 				AAF12A1A1FF064DA007A3799 /* Top */,
+				AAF12A1B1FF06518007A3799 /* Mid */,
+				AAF12A1C1FF0651D007A3799 /* Bottom */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -137,6 +142,23 @@
 				AAF12A1E1FF0652E007A3799 /* JLCSBottomTableViewCell.xib */,
 			);
 			path = Bottom;
+			sourceTree = "<group>";
+		};
+		AAF12A251FF0660B007A3799 /* Generics */ = {
+			isa = PBXGroup;
+			children = (
+				AAF12A2B1FF0663F007A3799 /* Rounded Shadow */,
+			);
+			path = Generics;
+			sourceTree = "<group>";
+		};
+		AAF12A2B1FF0663F007A3799 /* Rounded Shadow */ = {
+			isa = PBXGroup;
+			children = (
+				AAF12A261FF0662B007A3799 /* JLRoundedShadowView.swift */,
+				AAF12A291FF0663D007A3799 /* JLRoundedShadowView.xib */,
+			);
+			path = "Rounded Shadow";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +255,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAF12A2A1FF0663D007A3799 /* JLRoundedShadowView.xib in Resources */,
 				AAF12A201FF0652E007A3799 /* JLCSBottomTableViewCell.xib in Resources */,
 				AAF12A181FF064A9007A3799 /* JLCSTopTableViewCell.xib in Resources */,
 				AAF12A241FF0653F007A3799 /* JLCSMidTableViewCell.xib in Resources */,
@@ -254,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAF12A1F1FF0652E007A3799 /* JLCSBottomTableViewCell.swift in Sources */,
+				AAF12A271FF0662B007A3799 /* JLRoundedShadowView.swift in Sources */,
 				AAF12A0F1FEFE865007A3799 /* JLCardSectionTableView.swift in Sources */,
 				AAF12A231FF0653F007A3799 /* JLCSMidTableViewCell.swift in Sources */,
 				AAF12A171FF064A9007A3799 /* JLCSTopTableViewCell.swift in Sources */,
