@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1763DF0B1FF1E92800CE97FE /* JLCardSectionTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1763DF0C1FF1E92800CE97FE /* JLCardSectionTableView.framework */; };
+		1763DF0E1FF1E98200CE97FE /* JLCardSectionTableView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1763DF0C1FF1E92800CE97FE /* JLCardSectionTableView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AAF129BA1FEFE777007A3799 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF129B91FEFE777007A3799 /* AppDelegate.swift */; };
 		AAF129BC1FEFE777007A3799 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF129BB1FEFE777007A3799 /* ViewController.swift */; };
 		AAF129BF1FEFE777007A3799 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAF129BD1FEFE777007A3799 /* Main.storyboard */; };
@@ -15,7 +17,6 @@
 		AAF129C71FEFE777007A3799 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAF129C51FEFE777007A3799 /* LaunchScreen.storyboard */; };
 		AAF129D21FEFE778007A3799 /* JLCardSectionTableViewDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF129D11FEFE778007A3799 /* JLCardSectionTableViewDemoTests.swift */; };
 		AAF129DD1FEFE778007A3799 /* JLCardSectionTableViewDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF129DC1FEFE778007A3799 /* JLCardSectionTableViewDemoUITests.swift */; };
-		AAF12A111FEFE891007A3799 /* JLCardSectionTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAF12A121FEFE891007A3799 /* JLCardSectionTableView.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +36,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1763DF0A1FF1E91000CE97FE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1763DF0E1FF1E98200CE97FE /* JLCardSectionTableView.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1763DF0C1FF1E92800CE97FE /* JLCardSectionTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JLCardSectionTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAF129B61FEFE777007A3799 /* JLCardSectionTableViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JLCardSectionTableViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAF129B91FEFE777007A3799 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAF129BB1FEFE777007A3799 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,7 +66,6 @@
 		AAF129D81FEFE778007A3799 /* JLCardSectionTableViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JLCardSectionTableViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAF129DC1FEFE778007A3799 /* JLCardSectionTableViewDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLCardSectionTableViewDemoUITests.swift; sourceTree = "<group>"; };
 		AAF129DE1FEFE778007A3799 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AAF12A121FEFE891007A3799 /* JLCardSectionTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JLCardSectionTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAF12A111FEFE891007A3799 /* JLCardSectionTableView.framework in Frameworks */,
+				1763DF0B1FF1E92800CE97FE /* JLCardSectionTableView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +150,7 @@
 		AAF12A101FEFE891007A3799 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AAF12A121FEFE891007A3799 /* JLCardSectionTableView.framework */,
+				1763DF0C1FF1E92800CE97FE /* JLCardSectionTableView.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -150,6 +165,7 @@
 				AAF129B21FEFE777007A3799 /* Sources */,
 				AAF129B31FEFE777007A3799 /* Frameworks */,
 				AAF129B41FEFE777007A3799 /* Resources */,
+				1763DF0A1FF1E91000CE97FE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

@@ -9,7 +9,20 @@
 import UIKit
 
 class JLRoundedShadowView: UIView {
-
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        let shadowView = Bundle.main.loadNibNamed("JLRoundedShadowView", owner: self, options: nil)!.first as! UIView
+        shadowView.layer.shadowColor = UIColor.black.cgColor
+        shadowView.layer.shadowOffset = CGSize(width: 0, height: 1.5)
+        shadowView.layer.shadowRadius = 4
+        shadowView.layer.shadowOpacity = 0.25
+        let roundedView = shadowView.subviews.first!
+        roundedView.layer.cornerRadius = 10
+        roundedView.clipsToBounds = true
+    }
+    
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.

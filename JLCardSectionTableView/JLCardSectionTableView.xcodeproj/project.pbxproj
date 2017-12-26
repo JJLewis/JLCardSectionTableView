@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1763DEF31FF1DAE200CE97FE /* JLCSTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1763DEF21FF1DAE200CE97FE /* JLCSTableViewCell.swift */; };
+		1763DEF51FF1DBB000CE97FE /* JLCardSectionStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1763DEF41FF1DBB000CE97FE /* JLCardSectionStructs.swift */; };
 		AAF129FE1FEFE78A007A3799 /* JLCardSectionTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAF129F41FEFE78A007A3799 /* JLCardSectionTableView.framework */; };
 		AAF12A031FEFE78A007A3799 /* JLCardSectionTableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF12A021FEFE78A007A3799 /* JLCardSectionTableViewTests.swift */; };
 		AAF12A051FEFE78A007A3799 /* JLCardSectionTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = AAF129F71FEFE78A007A3799 /* JLCardSectionTableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -32,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1763DEF21FF1DAE200CE97FE /* JLCSTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLCSTableViewCell.swift; sourceTree = "<group>"; };
+		1763DEF41FF1DBB000CE97FE /* JLCardSectionStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLCardSectionStructs.swift; sourceTree = "<group>"; };
 		AAF129F41FEFE78A007A3799 /* JLCardSectionTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JLCardSectionTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAF129F71FEFE78A007A3799 /* JLCardSectionTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLCardSectionTableView.h; sourceTree = "<group>"; };
 		AAF129F81FEFE78A007A3799 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -91,6 +95,7 @@
 			children = (
 				AAF129F71FEFE78A007A3799 /* JLCardSectionTableView.h */,
 				AAF12A0E1FEFE865007A3799 /* JLCardSectionTableView.swift */,
+				1763DEF41FF1DBB000CE97FE /* JLCardSectionStructs.swift */,
 				AAF12A251FF0660B007A3799 /* Generics */,
 				AAF12A191FF064D0007A3799 /* Cells */,
 				AAF129F81FEFE78A007A3799 /* Info.plist */,
@@ -110,6 +115,7 @@
 		AAF12A191FF064D0007A3799 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				1763DEF21FF1DAE200CE97FE /* JLCSTableViewCell.swift */,
 				AAF12A1A1FF064DA007A3799 /* Top */,
 				AAF12A1B1FF06518007A3799 /* Mid */,
 				AAF12A1C1FF0651D007A3799 /* Bottom */,
@@ -279,8 +285,10 @@
 				AAF12A1F1FF0652E007A3799 /* JLCSBottomTableViewCell.swift in Sources */,
 				AAF12A271FF0662B007A3799 /* JLRoundedShadowView.swift in Sources */,
 				AAF12A0F1FEFE865007A3799 /* JLCardSectionTableView.swift in Sources */,
+				1763DEF51FF1DBB000CE97FE /* JLCardSectionStructs.swift in Sources */,
 				AAF12A231FF0653F007A3799 /* JLCSMidTableViewCell.swift in Sources */,
 				AAF12A171FF064A9007A3799 /* JLCSTopTableViewCell.swift in Sources */,
+				1763DEF31FF1DAE200CE97FE /* JLCSTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

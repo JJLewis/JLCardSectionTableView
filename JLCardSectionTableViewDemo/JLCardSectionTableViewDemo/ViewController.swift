@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import JLCardSectionTableView
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet var table:JLCardSectionTableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

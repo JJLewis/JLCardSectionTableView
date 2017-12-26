@@ -8,7 +8,7 @@
 
 import UIKit
 
-class JLCSMidTableViewCell: UITableViewCell {
+class JLCSMidTableViewCell: JLCSTableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class JLCSBottomTableViewCell: UITableViewCell {
+class JLCSBottomTableViewCell: JLCSTableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

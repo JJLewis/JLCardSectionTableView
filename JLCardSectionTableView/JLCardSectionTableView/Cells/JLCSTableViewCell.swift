@@ -1,20 +1,22 @@
 //
-//  JLCSTopTableViewCell.swift
+//  JLCSTableViewCell.swift
 //  JLCardSectionTableView
 //
-//  Created by Jordan Lewis on 25/12/17.
+//  Created by jordanlewis on 26/12/17.
 //  Copyright © 2017 Jordan Lewis. All rights reserved.
 //
 
 import UIKit
 
-class JLCSTopTableViewCell: JLCSTableViewCell {
-
-    @IBOutlet var titleLabel: UILabel!
+class JLCSTableViewCell: UITableViewCell {
+    
+    @IBOutlet var shadowView: JLRoundedShadowView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        contentView.clipsToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -22,5 +24,5 @@ class JLCSTopTableViewCell: JLCSTableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
 }
