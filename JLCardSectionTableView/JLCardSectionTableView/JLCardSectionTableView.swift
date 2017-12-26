@@ -12,6 +12,11 @@ public class JLCardSectionTableView: UITableView, UITableViewDelegate, UITableVi
     
     private var data:JLCSTableData = []
     
+    func setTableData(_ newData:JLCSTableData) {
+        data = newData
+        reloadData()
+    }
+    
     // MARK: Data Source
     public func numberOfSections(in tableView: UITableView) -> Int {
         return data.count

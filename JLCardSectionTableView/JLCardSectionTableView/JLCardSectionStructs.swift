@@ -8,23 +8,32 @@
 
 import Foundation
 
-struct JLCSRow {
-    let title:String!
-    let selectedCallback:(JLCSTableViewCell)->()
+public struct JLCSRow {
+    public let title:String!
+    public let selectedCallback:()->()
 }
 
-struct JLCSSection {
-    let title:String!
-    private var rows:[JLCSRow]!
-    var numberOfRows:Int {
+public struct JLCSSection {
+    public let title:String!
+    private var rows:[JLCSRow] = []
+    public var numberOfRows:Int {
         get {
             return rows.count + 2
         }
     }
     
-    mutating func addRow(_ row:JLCSRow) {
+    public mutating func addRow(_ row:JLCSRow) {
         rows.append(row)
+    }
+    
+    public init(title _title:String) {
+        title = _title
+    }
+    
+    public init(title _title:String, rows _rows:[JLCSRow]) {
+        title = _title
+        rows = _rows
     }
 }
 
-typealias JLCSTableData = [JLCSSection]
+public typealias JLCSTableData = [JLCSSection]
