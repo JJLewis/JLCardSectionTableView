@@ -10,7 +10,11 @@ import Foundation
 
 public struct JLCSRow {
     public let title:String!
-    public let selectedCallback:()->()
+    public var selectedCallback:()->() = {}
+    
+    public init(title _title:String) {
+        title = _title
+    }
 }
 
 public struct JLCSSection {

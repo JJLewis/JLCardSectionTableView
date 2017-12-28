@@ -17,8 +17,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let section = JLCSSection(title: "Hello World")
+        var section = JLCSSection(title: "Hello World")
+        let a = JLCSRow(title: "a")
+        section.addRow(a)
         
+        table.setTableData([section])
     }
 
     override func didReceiveMemoryWarning() {

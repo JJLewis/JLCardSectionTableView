@@ -12,7 +12,7 @@ public class JLCardSectionTableView: UITableView, UITableViewDelegate, UITableVi
     
     private var data:JLCSTableData = []
     
-    func setTableData(_ newData:JLCSTableData) {
+    public func setTableData(_ newData:JLCSTableData) {
         data = newData
         reloadData()
     }
