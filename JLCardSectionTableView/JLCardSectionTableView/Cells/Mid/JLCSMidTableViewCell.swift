@@ -11,7 +11,6 @@ import UIKit
 class JLCSMidTableViewCell: JLCSTableViewCell {
 
     @IBOutlet var cardContentView:UIView!
-    @IBOutlet var rowSeparator:UIView!
     
     func setContent(view:UIView) {
         cardContentView.addSubview(view)

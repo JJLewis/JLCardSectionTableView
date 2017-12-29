@@ -11,7 +11,7 @@ import UIKit
 public class JLCardSectionTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
     
     private enum CellType {
-        case top, mid, bot
+        case top, mid, bot, single
     }
     private var data:JLCSTableData = []
     
@@ -22,6 +22,9 @@ public class JLCardSectionTableView: UITableView, UITableViewDelegate, UITableVi
     
     private func cellTypeFor(indexPath:IndexPath) -> CellType {
         let section = data[indexPath.section]
+        if section.numberOfRows == 1 {
+            return .single
+        }
         switch indexPath.row {
         case 0:
             return .top
@@ -40,7 +43,12 @@ public class JLCardSectionTableView: UITableView, UITableViewDelegate, UITableVi
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data[section].numberOfRows + 2
+        let sectionData = data[section]
+        if sectionData.numberOfRows == 1 {
+            return 1
+        } else {
+            return data[section].numberOfRows + 2
+        }
     }
     
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -51,6 +59,8 @@ public class JLCardSectionTableView: UITableView, UITableViewDelegate, UITableVi
             return data[indexPath.section].getRow(indexPath.row - 1).height
         case .bot:
             return 40
+        case .single:
+            return data[indexPath.section].getRow(indexPath.row).height + 60
         }
     }
     
@@ -62,18 +72,19 @@ public class JLCardSectionTableView: UITableView, UITableViewDelegate, UITableVi
             cell = tableView.dequeueReusableCell(withIdentifier: "JLCSTopCell", for: indexPath) as! JLCSTopTableViewCell
             (cell as! JLCSTopTableViewCell).titleLabel.text = section.title
             break
-        case .mid:
-            cell = tableView.dequeueReusableCell(withIdentifier: "JLCSMiddleCell", for: indexPath) as! JLCSMidTableViewCell
-            (cell as! JLCSMidTableViewCell).setContent(view: section.getRow(indexPath.row - 1).view)
-            if section.numberOfRows == 1 {
-                (cell as! JLCSMidTableViewCell).rowSeparator.removeFromSuperview()
-            }
-            break
         case .bot:
             cell = tableView.dequeueReusableCell(withIdentifier: "JLCSBottomCell", for: indexPath)
             break
+        case .mid:
+            cell = tableView.dequeueReusableCell(withIdentifier: "JLCSMiddleCell", for: indexPath) as! JLCSMidTableViewCell
+            (cell as! JLCSMidTableViewCell).setContent(view: section.getRow(indexPath.row - 1).view)
+            break
+        case .single:
+            cell = tableView.dequeueReusableCell(withIdentifier: "JLCSSingleRowCell", for: indexPath) as! JLCSSingleRowSectionTableViewCell
+            (cell as! JLCSSingleRowSectionTableViewCell).titleLabel.text = section.title
+            (cell as! JLCSSingleRowSectionTableViewCell).setContent(view: section.getRow(indexPath.row).view)
+            break
         }
-        
         return cell
     }
     
@@ -88,6 +99,7 @@ public class JLCardSectionTableView: UITableView, UITableViewDelegate, UITableVi
         register(UINib(nibName: "JLCSTopTableViewCell", bundle: jlcsBundle), forCellReuseIdentifier: "JLCSTopCell")
         register(UINib(nibName: "JLCSMidTableViewCell", bundle: jlcsBundle), forCellReuseIdentifier: "JLCSMiddleCell")
         register(UINib(nibName: "JLCSBottomTableViewCell", bundle: jlcsBundle), forCellReuseIdentifier: "JLCSBottomCell")
+        register(UINib(nibName: "JLCSSingleRowSectionTableViewCell", bundle: jlcsBundle), forCellReuseIdentifier: "JLCSSingleRowCell")
     }
     
     public override func awakeFromNib() {

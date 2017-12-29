@@ -56,7 +56,6 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="cardContentView" destination="Hn0-h3-rU2" id="2BF-aQ-2is"/>
-                <outlet property="rowSeparator" destination="pdV-9Y-0dx" id="IVZ-be-Mur"/>
                 <outlet property="shadowView" destination="jCX-1B-S9t" id="Kl4-VY-QhD"/>
             </connections>
             <point key="canvasLocation" x="25" y="122"/>
