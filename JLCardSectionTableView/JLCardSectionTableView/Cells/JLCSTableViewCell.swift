@@ -11,6 +11,12 @@ import UIKit
 class JLCSTableViewCell: UITableViewCell {
     
     @IBOutlet var shadowView: JLRoundedShadowView!
+    @IBOutlet var cardContentView:UIView!
+    
+    func setContent(view:UIView) {
+        cardContentView.addSubview(view)
+        cardContentView.fitToSuperView(view: view)
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,6 +24,9 @@ class JLCSTableViewCell: UITableViewCell {
         
         clipsToBounds = true
         contentView.clipsToBounds = true
+        
+        cardContentView.layer.cornerRadius = 10
+        cardContentView.clipsToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

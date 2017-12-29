@@ -28,9 +28,9 @@ public class JLCardSectionTableView: UITableView, UITableViewDelegate, UITableVi
         switch indexPath.row {
         case 0:
             return .top
-        case 1..<section.numberOfRows+1:
+        case 1..<section.numberOfRows-1:
             return .mid
-        case section.numberOfRows+2:
+        case section.numberOfRows-1:
             return .bot
         default:
             return .bot
@@ -43,24 +43,20 @@ public class JLCardSectionTableView: UITableView, UITableViewDelegate, UITableVi
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let sectionData = data[section]
-        if sectionData.numberOfRows == 1 {
-            return 1
-        } else {
-            return data[section].numberOfRows + 2
-        }
+        return data[section].numberOfRows
     }
     
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let cellHeight = data[indexPath.section].getRow(indexPath.row).height
         switch cellTypeFor(indexPath: indexPath) {
         case .top:
-            return 60
+            return cellHeight + 40
         case .mid:
-            return data[indexPath.section].getRow(indexPath.row - 1).height
+            return cellHeight
         case .bot:
-            return 40
+            return cellHeight + 20
         case .single:
-            return data[indexPath.section].getRow(indexPath.row).height + 60
+            return cellHeight + 60
         }
     }
     
@@ -72,19 +68,20 @@ public class JLCardSectionTableView: UITableView, UITableViewDelegate, UITableVi
             cell = tableView.dequeueReusableCell(withIdentifier: "JLCSTopCell", for: indexPath) as! JLCSTopTableViewCell
             (cell as! JLCSTopTableViewCell).titleLabel.text = section.title
             break
-        case .bot:
-            cell = tableView.dequeueReusableCell(withIdentifier: "JLCSBottomCell", for: indexPath)
-            break
         case .mid:
-            cell = tableView.dequeueReusableCell(withIdentifier: "JLCSMiddleCell", for: indexPath) as! JLCSMidTableViewCell
-            (cell as! JLCSMidTableViewCell).setContent(view: section.getRow(indexPath.row - 1).view)
+            cell = tableView.dequeueReusableCell(withIdentifier: "JLCSMiddleCell", for: indexPath) as! JLCSTableViewCell
+            (cell as! JLCSTableViewCell).cardContentView.layer.cornerRadius = 0
+            break
+        case .bot:
+            cell = tableView.dequeueReusableCell(withIdentifier: "JLCSBottomCell", for: indexPath) as! JLCSTableViewCell
             break
         case .single:
             cell = tableView.dequeueReusableCell(withIdentifier: "JLCSSingleRowCell", for: indexPath) as! JLCSSingleRowSectionTableViewCell
             (cell as! JLCSSingleRowSectionTableViewCell).titleLabel.text = section.title
-            (cell as! JLCSSingleRowSectionTableViewCell).setContent(view: section.getRow(indexPath.row).view)
             break
         }
+        
+        (cell as! JLCSTableViewCell).setContent(view: section.getRow(indexPath.row).view)
         return cell
     }
     
