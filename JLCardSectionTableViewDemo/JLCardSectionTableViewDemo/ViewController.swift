@@ -17,15 +17,37 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        var section = JLCSSection(title: "Hello World")
-        let a = JLCSRow(title: "a")
-        section.addRow(a)
+        var account = JLCSSection(title: "Account")
+        let updateDetails = JLCSRow(title: "Update Details")
+        let buyCredits = JLCSRow(title: "Buy Credits")
+        account.addRow(updateDetails)
+        account.addRow(buyCredits)
         
-        var section2 = JLCSSection(title: "Nice to meet you")
-        let b = JLCSRow(title: "b")
-        section2.addRow(b)
+        var settings = JLCSSection(title: "Settings")
+        let pushNotifications = JLCSRow(title: "Push Notifications")
+        let tsandcs = JLCSRow(title: "Terms of Services")
+        let privacypolicy = JLCSRow(title: "Privacy Policy")
+        let contactus = JLCSRow(title: "Contact Us")
+        let logout = JLCSRow(title: "Logout")
+        settings.addRow(pushNotifications)
+        settings.addRow(tsandcs)
+        settings.addRow(privacypolicy)
+        settings.addRow(contactus)
+        settings.addRow(logout)
         
-        table.setTableData([section, section2])
+        var about = JLCSSection(title: "About Handpic'd")
+        let aboutthisapp = JLCSRow(title: "About this app")
+        about.addRow(aboutthisapp)
+        
+        var help = JLCSSection(title: "Help & Support")
+        let gethelp = JLCSRow(title: "Get help/support")
+        help.addRow(gethelp)
+        
+        var rate = JLCSSection(title: "Rate")
+        let rateapp = JLCSRow(title: "Rate this app")
+        rate.addRow(rateapp)
+        
+        table.setTableData([account, settings, about, help, rate])
     }
 
     override func didReceiveMemoryWarning() {
