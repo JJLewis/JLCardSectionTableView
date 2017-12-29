@@ -8,10 +8,8 @@
 
 import UIKit
 
-class JLCSSingleRowSectionTableViewCell: JLCSMidTableViewCell {
-    
-    @IBOutlet var titleLabel: UILabel!
-    
+class JLCSSingleRowSectionTableViewCell: JLCSTopTableViewCell {
+        
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
