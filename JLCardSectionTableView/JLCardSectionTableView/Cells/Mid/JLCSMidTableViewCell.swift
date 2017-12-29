@@ -10,6 +10,8 @@ import UIKit
 
 class JLCSMidTableViewCell: JLCSTableViewCell {
 
+    @IBOutlet var cardContentView:UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

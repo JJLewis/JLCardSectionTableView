@@ -46,7 +46,7 @@ public class JLCardSectionTableView: UITableView, UITableViewDelegate, UITableVi
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch cellTypeFor(indexPath: indexPath) {
         case .top:
-            return 80
+            return 60
         case .mid:
             return 70
         case .bot:
@@ -60,7 +60,7 @@ public class JLCardSectionTableView: UITableView, UITableViewDelegate, UITableVi
         switch cellTypeFor(indexPath: indexPath) {
         case .top:
             cell = tableView.dequeueReusableCell(withIdentifier: "JLCSTopCell", for: indexPath) as! JLCSTopTableViewCell
-            
+            (cell as! JLCSTopTableViewCell).titleLabel.text = section.title
             break
         case .mid:
             cell = tableView.dequeueReusableCell(withIdentifier: "JLCSMiddleCell", for: indexPath) as! JLCSMidTableViewCell
