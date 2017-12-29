@@ -12,6 +12,11 @@ class JLCSTableViewCell: UITableViewCell {
     
     @IBOutlet var shadowView: JLRoundedShadowView!
     @IBOutlet var cardContentView:UIView!
+    var tapAction:()->() = {}
+    
+    @objc func cellTapped(_ sender:UITapGestureRecognizer) {
+        tapAction()
+    }
     
     func setContent(view:UIView) {
         cardContentView.addSubview(view)
@@ -27,12 +32,12 @@ class JLCSTableViewCell: UITableViewCell {
         
         cardContentView.layer.cornerRadius = 10
         cardContentView.clipsToBounds = true
+        cardContentView.isUserInteractionEnabled = true
+        
+        let tapGestureRecogniser:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(JLCSTableViewCell.cellTapped(_:)))
+        cardContentView.addGestureRecognizer(tapGestureRecogniser)
+        tapGestureRecogniser.numberOfTapsRequired = 1
+        tapGestureRecogniser.numberOfTouchesRequired = 1
+        tapGestureRecogniser.delegate = self
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }

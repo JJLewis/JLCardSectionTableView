@@ -63,6 +63,7 @@ public class JLCardSectionTableView: UITableView, UITableViewDelegate, UITableVi
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = UITableViewCell()
         let section = data[indexPath.section]
+        
         switch cellTypeFor(indexPath: indexPath) {
         case .top:
             cell = tableView.dequeueReusableCell(withIdentifier: "JLCSTopCell", for: indexPath) as! JLCSTopTableViewCell
@@ -81,7 +82,9 @@ public class JLCardSectionTableView: UITableView, UITableViewDelegate, UITableVi
             break
         }
         
-        (cell as! JLCSTableViewCell).setContent(view: section.getRow(indexPath.row).view)
+        let row = section.getRow(indexPath.row)
+        (cell as! JLCSTableViewCell).setContent(view: row.view)
+        (cell as! JLCSTableViewCell).tapAction = row.selectedCallback
         return cell
     }
     

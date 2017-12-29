@@ -18,7 +18,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         var account = JLCSSection(title: "Account")
-        let updateDetails = JLCSRow(title: "Update Details", decorator:UIImage.JLCSRowDecoratorRightArrow)
+        var updateDetails = JLCSRow(title: "Update Details", decorator:UIImage.JLCSRowDecoratorRightArrow)
+        updateDetails.selectedCallback = {
+            print("Hello world")
+        }
         let buyCredits = JLCSRow(title: "Buy Credits")
         account.addRow(updateDetails)
         account.addRow(buyCredits)
