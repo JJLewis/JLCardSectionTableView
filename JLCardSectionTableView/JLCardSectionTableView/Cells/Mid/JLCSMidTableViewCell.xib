@@ -36,10 +36,9 @@
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="Hn0-h3-rU2" secondAttribute="bottom" constant="20" id="4sK-KW-swx"/>
                             <constraint firstItem="pdV-9Y-0dx" firstAttribute="trailing" secondItem="Hn0-h3-rU2" secondAttribute="trailing" id="JI8-7T-KA8"/>
                             <constraint firstItem="pdV-9Y-0dx" firstAttribute="bottom" secondItem="Hn0-h3-rU2" secondAttribute="bottom" id="Jn6-Ju-wcv"/>
-                            <constraint firstItem="Hn0-h3-rU2" firstAttribute="top" secondItem="jCX-1B-S9t" secondAttribute="top" constant="20" id="TXX-ib-nwT"/>
+                            <constraint firstItem="Hn0-h3-rU2" firstAttribute="centerY" secondItem="jCX-1B-S9t" secondAttribute="centerY" id="ObV-Wu-FDW"/>
                             <constraint firstItem="pdV-9Y-0dx" firstAttribute="leading" secondItem="jCX-1B-S9t" secondAttribute="leading" constant="8" id="UCI-Lx-L1i"/>
                             <constraint firstItem="Hn0-h3-rU2" firstAttribute="leading" secondItem="jCX-1B-S9t" secondAttribute="leading" id="w0g-Ro-k7N"/>
                             <constraint firstAttribute="trailing" secondItem="Hn0-h3-rU2" secondAttribute="trailing" id="wBL-xM-W3o"/>
@@ -47,6 +46,7 @@
                     </view>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="Hn0-h3-rU2" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="DBt-nE-yfT"/>
                     <constraint firstAttribute="trailing" secondItem="jCX-1B-S9t" secondAttribute="trailing" constant="20" id="XG9-gI-mqo"/>
                     <constraint firstItem="jCX-1B-S9t" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="-20" id="jUq-Uj-qTk"/>
                     <constraint firstItem="jCX-1B-S9t" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="nUr-ho-Mvq"/>
