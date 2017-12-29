@@ -53,9 +53,11 @@ public class JLCardSectionTableView: UITableView, UITableViewDelegate, UITableVi
         delegate = self
         dataSource = self
         
-        register(UINib(nibName: "JLCSTopTableViewCell", bundle: nil), forCellReuseIdentifier: "JLCSTopCell")
-        register(UINib(nibName: "JLCSMiddleTableViewCell", bundle: nil), forCellReuseIdentifier: "JLCSMiddleCell")
-        register(UINib(nibName: "JLCSBottomTableViewCell", bundle: nil), forCellReuseIdentifier: "JLCSBottomCell")
+        print(Bundle.allFrameworks.map {$0.bundleIdentifier})
+        let bundle = Bundle.allFrameworks.filter {$0.bundleIdentifier == "com.jjlewis.JLCardSectionTableView"}.first!
+        register(UINib(nibName: "JLCSTopTableViewCell", bundle: bundle), forCellReuseIdentifier: "JLCSTopCell")
+        register(UINib(nibName: "JLCSMidTableViewCell", bundle: bundle), forCellReuseIdentifier: "JLCSMiddleCell")
+        register(UINib(nibName: "JLCSBottomTableViewCell", bundle: bundle), forCellReuseIdentifier: "JLCSBottomCell")
     }
     
     public override func awakeFromNib() {
