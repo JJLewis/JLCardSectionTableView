@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         let a = JLCSRow(title: "a")
         section.addRow(a)
         
-        table.setTableData([section])
+        table.setTableData([section, section])
     }
 
     override func didReceiveMemoryWarning() {
