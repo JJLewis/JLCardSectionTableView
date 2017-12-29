@@ -24,9 +24,7 @@ class JLRoundedShadowView: UIView {
         roundedView.layer.cornerRadius = 10
         roundedView.clipsToBounds = true
         addSubview(shadowView)
-        shadowView.translatesAutoresizingMaskIntoConstraints = false
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[shadowView]|", options: .alignAllLeft, metrics: nil, views: ["shadowView":shadowView]))
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[shadowView]|", options: .alignAllLeft, metrics: nil, views: ["shadowView":shadowView]))
+        fitToSuperView(view: shadowView)
         sendSubview(toBack: shadowView)
     }
     

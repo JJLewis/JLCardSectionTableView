@@ -12,6 +12,11 @@ class JLCSMidTableViewCell: JLCSTableViewCell {
 
     @IBOutlet var cardContentView:UIView!
     
+    func setContent(view:UIView) {
+        cardContentView.addSubview(view)
+        cardContentView.fitToSuperView(view: view)
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

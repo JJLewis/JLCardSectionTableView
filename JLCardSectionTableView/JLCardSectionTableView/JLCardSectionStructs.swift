@@ -8,20 +8,39 @@
 
 import Foundation
 
+private struct JLCSRowDefault {
+    private let title:String
+    private let image:UIImage?
+    internal var view:JLCSDefaultContent {
+        get {
+            let content = jlcsBundle.loadNibNamed("JLCSDefaultContent", owner: nil, options: nil)!.first as! JLCSDefaultContent
+            content.titleLabel.text = title
+            content.imageView.image = image
+            return content
+        }
+    }
+    
+    public init(title _title:String, image _image:UIImage?) {
+        title = _title
+        image = _image
+    }
+}
+
 public struct JLCSRow {
-    let title:String?
-    let view:UIView?
+    let view:UIView
     public var height:CGFloat = 50
     public var selectedCallback:()->() = {}
     
-    public init(title _title:String) {
-        title = _title
-        view = nil
+    public init(title:String) {
+        self.init(title: title, image: nil)
+    }
+    
+    public init(title:String, image:UIImage?) {
+        self.init(view: JLCSRowDefault(title: title, image: image).view)
     }
     
     public init(view _view:UIView) {
         view = _view
-        title = nil
     }
 }
 
