@@ -10,11 +10,28 @@ import UIKit
 
 public class JLCardSectionTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
     
+    private enum CellType {
+        case top, mid, bot
+    }
     private var data:JLCSTableData = []
     
     public func setTableData(_ newData:JLCSTableData) {
         data = newData
         reloadData()
+    }
+    
+    private func cellTypeFor(indexPath:IndexPath) -> CellType {
+        let section = data[indexPath.section]
+        switch indexPath.row {
+        case 0:
+            return .top
+        case 1..<section.numberOfRows+1:
+            return .mid
+        case section.numberOfRows+2:
+            return .bot
+        default:
+            return .bot
+        }
     }
     
     // MARK: Data Source
@@ -23,25 +40,34 @@ public class JLCardSectionTableView: UITableView, UITableViewDelegate, UITableVi
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data[section].numberOfRows
+        return data[section].numberOfRows + 2
+    }
+    
+    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch cellTypeFor(indexPath: indexPath) {
+        case .top:
+            return 80
+        case .mid:
+            return 70
+        case .bot:
+            return 40
+        }
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = UITableViewCell()
         let section = data[indexPath.section]
-        switch indexPath.row {
-        case 0:
+        switch cellTypeFor(indexPath: indexPath) {
+        case .top:
             cell = tableView.dequeueReusableCell(withIdentifier: "JLCSTopCell", for: indexPath) as! JLCSTopTableViewCell
             
             break
-        case 1..<section.numberOfRows-1:
+        case .mid:
             cell = tableView.dequeueReusableCell(withIdentifier: "JLCSMiddleCell", for: indexPath) as! JLCSMidTableViewCell
-
+            // data is indexPath.row - 1
             break
-        case section.numberOfRows-1:
+        case .bot:
             cell = tableView.dequeueReusableCell(withIdentifier: "JLCSBottomCell", for: indexPath)
-            break
-        default:
             break
         }
         
@@ -52,6 +78,9 @@ public class JLCardSectionTableView: UITableView, UITableViewDelegate, UITableVi
     func setup() {
         delegate = self
         dataSource = self
+        
+        separatorStyle = .none
+        allowsSelection = false
         
         register(UINib(nibName: "JLCSTopTableViewCell", bundle: jlcsBundle), forCellReuseIdentifier: "JLCSTopCell")
         register(UINib(nibName: "JLCSMidTableViewCell", bundle: jlcsBundle), forCellReuseIdentifier: "JLCSMiddleCell")

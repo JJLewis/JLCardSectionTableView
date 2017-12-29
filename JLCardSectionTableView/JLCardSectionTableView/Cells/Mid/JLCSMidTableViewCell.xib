@@ -20,15 +20,15 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jCX-1B-S9t" customClass="JLRoundedShadowView" customModule="JLCardSectionTableView" customModuleProvider="target">
-                        <rect key="frame" x="20" y="0.0" width="280" height="183.5"/>
+                        <rect key="frame" x="20" y="-20" width="280" height="223.5"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="jCX-1B-S9t" secondAttribute="trailing" constant="20" id="XG9-gI-mqo"/>
-                    <constraint firstItem="jCX-1B-S9t" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="jUq-Uj-qTk"/>
+                    <constraint firstItem="jCX-1B-S9t" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="-20" id="jUq-Uj-qTk"/>
                     <constraint firstItem="jCX-1B-S9t" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="nUr-ho-Mvq"/>
-                    <constraint firstAttribute="bottom" secondItem="jCX-1B-S9t" secondAttribute="bottom" id="rUV-cC-sYU"/>
+                    <constraint firstAttribute="bottom" secondItem="jCX-1B-S9t" secondAttribute="bottom" constant="-20" id="rUV-cC-sYU"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

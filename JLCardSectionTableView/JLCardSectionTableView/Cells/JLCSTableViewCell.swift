@@ -16,6 +16,7 @@ class JLCSTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
+        clipsToBounds = true
         contentView.clipsToBounds = true
     }
 

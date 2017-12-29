@@ -13,6 +13,8 @@ class JLRoundedShadowView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        backgroundColor = .clear
+        
         let shadowView = jlcsBundle.loadNibNamed("JLRoundedShadowView", owner: self, options: nil)!.first as! UIView
         shadowView.layer.shadowColor = UIColor.black.cgColor
         shadowView.layer.shadowOffset = CGSize(width: 0, height: 1.5)
@@ -21,6 +23,10 @@ class JLRoundedShadowView: UIView {
         let roundedView = shadowView.subviews.first!
         roundedView.layer.cornerRadius = 10
         roundedView.clipsToBounds = true
+        addSubview(shadowView)
+        shadowView.translatesAutoresizingMaskIntoConstraints = false
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[shadowView]|", options: .alignAllLeft, metrics: nil, views: ["shadowView":shadowView]))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[shadowView]|", options: .alignAllLeft, metrics: nil, views: ["shadowView":shadowView]))
     }
     
     /*

@@ -22,7 +22,7 @@ public struct JLCSSection {
     private var rows:[JLCSRow] = []
     public var numberOfRows:Int {
         get {
-            return rows.count + 2
+            return rows.count
         }
     }
     
