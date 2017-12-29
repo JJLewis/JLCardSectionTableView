@@ -13,7 +13,7 @@ class JLRoundedShadowView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        let shadowView = Bundle.allFrameworks.filter{$0.bundleIdentifier == "com.jjlewis.JLCardSectionTableView"}.first!.loadNibNamed("JLRoundedShadowView", owner: self, options: nil)!.first as! UIView
+        let shadowView = jlcsBundle.loadNibNamed("JLRoundedShadowView", owner: self, options: nil)!.first as! UIView
         shadowView.layer.shadowColor = UIColor.black.cgColor
         shadowView.layer.shadowOffset = CGSize(width: 0, height: 1.5)
         shadowView.layer.shadowRadius = 4
