@@ -27,7 +27,9 @@ class ViewController: UIViewController {
         account.addRow(buyCredits)
         
         var settings = JLCSSection(title: "Settings")
-        let pushNotifications = JLCSRow(title: "Push Notifications")
+        let pushView = Bundle.main.loadNibNamed("CustomCellView", owner: self, options: nil)!.first as! CustomCellView
+        pushView.titleLabel.text = "Push Notifications: Try toggle the switch"
+        let pushNotifications = JLCSRow(view: pushView)
         let tsandcs = JLCSRow(title: "Terms of Services")
         let privacypolicy = JLCSRow(title: "Privacy Policy")
         let contactus = JLCSRow(title: "Contact Us")
