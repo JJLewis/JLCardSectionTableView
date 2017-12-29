@@ -7,7 +7,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,13 +19,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9i9-YH-eWo">
-                    <rect key="frame" x="8" y="13" width="318" height="25"/>
+                    <rect key="frame" x="10" y="13" width="322" height="25"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lUq-Ld-uYp">
-                    <rect key="frame" x="334" y="13" width="25" height="25"/>
+                    <rect key="frame" x="340" y="13" width="25" height="25"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="lUq-Ld-uYp" secondAttribute="height" multiplier="1:1" id="97F-sy-I2D"/>
                     </constraints>
@@ -34,9 +33,9 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="9i9-YH-eWo" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="3hJ-go-Q4n"/>
+                <constraint firstItem="9i9-YH-eWo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="3hJ-go-Q4n"/>
                 <constraint firstItem="lUq-Ld-uYp" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.5" id="B5q-SD-GHY"/>
-                <constraint firstAttribute="trailingMargin" secondItem="lUq-Ld-uYp" secondAttribute="trailing" id="TgJ-Xf-JRE"/>
+                <constraint firstAttribute="trailing" secondItem="lUq-Ld-uYp" secondAttribute="trailing" constant="10" id="TgJ-Xf-JRE"/>
                 <constraint firstItem="lUq-Ld-uYp" firstAttribute="leading" secondItem="9i9-YH-eWo" secondAttribute="trailing" constant="8" id="gSr-FL-6FB"/>
                 <constraint firstItem="lUq-Ld-uYp" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="hLc-JE-ldx"/>
                 <constraint firstItem="9i9-YH-eWo" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.5" id="ovd-1V-PLa"/>

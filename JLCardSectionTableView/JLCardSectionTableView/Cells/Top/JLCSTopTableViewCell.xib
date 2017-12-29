@@ -27,7 +27,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Oi-yT-cez">
-                                <rect key="frame" x="8" y="55.5" width="272" height="1"/>
+                                <rect key="frame" x="10" y="55.5" width="270" height="1"/>
                                 <color key="backgroundColor" white="0.79643787200000005" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="YyP-eV-uVt"/>
@@ -38,7 +38,7 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="2H4-pG-j6j" secondAttribute="bottom" constant="10" id="80R-Sd-eyV"/>
                             <constraint firstItem="2H4-pG-j6j" firstAttribute="bottom" secondItem="1Oi-yT-cez" secondAttribute="bottom" id="8Zd-1f-1qK"/>
-                            <constraint firstItem="1Oi-yT-cez" firstAttribute="leading" secondItem="rYy-Px-N86" secondAttribute="leading" constant="8" id="AKB-dV-ReW"/>
+                            <constraint firstItem="1Oi-yT-cez" firstAttribute="leading" secondItem="rYy-Px-N86" secondAttribute="leading" constant="10" id="AKB-dV-ReW"/>
                             <constraint firstAttribute="trailing" secondItem="2H4-pG-j6j" secondAttribute="trailing" id="Jv8-yi-PIR"/>
                             <constraint firstAttribute="trailing" secondItem="1Oi-yT-cez" secondAttribute="trailing" id="bd5-KO-aCA"/>
                             <constraint firstItem="2H4-pG-j6j" firstAttribute="leading" secondItem="rYy-Px-N86" secondAttribute="leading" id="elo-jd-dQ0"/>
