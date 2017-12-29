@@ -65,6 +65,9 @@ public class JLCardSectionTableView: UITableView, UITableViewDelegate, UITableVi
         case .mid:
             cell = tableView.dequeueReusableCell(withIdentifier: "JLCSMiddleCell", for: indexPath) as! JLCSMidTableViewCell
             (cell as! JLCSMidTableViewCell).setContent(view: section.getRow(indexPath.row - 1).view)
+            if section.numberOfRows == 1 {
+                (cell as! JLCSMidTableViewCell).rowSeparator.removeFromSuperview()
+            }
             break
         case .bot:
             cell = tableView.dequeueReusableCell(withIdentifier: "JLCSBottomCell", for: indexPath)
