@@ -13,6 +13,7 @@
 		AA1CA0801FF5E81C00B574C2 /* JLCSDefaultContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA1CA07F1FF5E81C00B574C2 /* JLCSDefaultContent.xib */; };
 		AA1CA0821FF60A1500B574C2 /* JLCSExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1CA0811FF60A1500B574C2 /* JLCSExtensions.swift */; };
 		AA1CA0851FF60BAD00B574C2 /* JLCSDefaultContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1CA0841FF60BAD00B574C2 /* JLCSDefaultContent.swift */; };
+		AA1CA0871FF616F500B574C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA1CA0861FF616F500B574C2 /* Assets.xcassets */; };
 		AAF129FE1FEFE78A007A3799 /* JLCardSectionTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAF129F41FEFE78A007A3799 /* JLCardSectionTableView.framework */; };
 		AAF12A031FEFE78A007A3799 /* JLCardSectionTableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF12A021FEFE78A007A3799 /* JLCardSectionTableViewTests.swift */; };
 		AAF12A051FEFE78A007A3799 /* JLCardSectionTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = AAF129F71FEFE78A007A3799 /* JLCardSectionTableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -44,6 +45,7 @@
 		AA1CA07F1FF5E81C00B574C2 /* JLCSDefaultContent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JLCSDefaultContent.xib; sourceTree = "<group>"; };
 		AA1CA0811FF60A1500B574C2 /* JLCSExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLCSExtensions.swift; sourceTree = "<group>"; };
 		AA1CA0841FF60BAD00B574C2 /* JLCSDefaultContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLCSDefaultContent.swift; sourceTree = "<group>"; };
+		AA1CA0861FF616F500B574C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AAF129F41FEFE78A007A3799 /* JLCardSectionTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JLCardSectionTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAF129F71FEFE78A007A3799 /* JLCardSectionTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLCardSectionTableView.h; sourceTree = "<group>"; };
 		AAF129F81FEFE78A007A3799 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				1763DEF41FF1DBB000CE97FE /* JLCardSectionStructs.swift */,
 				AAF12A251FF0660B007A3799 /* Generics */,
 				AAF12A191FF064D0007A3799 /* Cells */,
+				AA1CA0861FF616F500B574C2 /* Assets.xcassets */,
 				AAF129F81FEFE78A007A3799 /* Info.plist */,
 			);
 			path = JLCardSectionTableView;
@@ -285,6 +288,7 @@
 				AAF12A201FF0652E007A3799 /* JLCSBottomTableViewCell.xib in Resources */,
 				AAF12A181FF064A9007A3799 /* JLCSTopTableViewCell.xib in Resources */,
 				AA1CA0801FF5E81C00B574C2 /* JLCSDefaultContent.xib in Resources */,
+				AA1CA0871FF616F500B574C2 /* Assets.xcassets in Resources */,
 				AAF12A241FF0653F007A3799 /* JLCSMidTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

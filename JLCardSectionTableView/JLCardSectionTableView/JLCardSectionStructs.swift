@@ -20,9 +20,9 @@ private struct JLCSRowDefault {
         }
     }
     
-    public init(title _title:String, image _image:UIImage?) {
+    public init(title _title:String, decorator:UIImage?) {
         title = _title
-        image = _image
+        image = decorator
     }
 }
 
@@ -32,11 +32,11 @@ public struct JLCSRow {
     public var selectedCallback:()->() = {}
     
     public init(title:String) {
-        self.init(title: title, image: nil)
+        self.init(title: title, decorator: nil)
     }
     
-    public init(title:String, image:UIImage?) {
-        self.init(view: JLCSRowDefault(title: title, image: image).view)
+    public init(title:String, decorator:UIImage?) {
+        self.init(view: JLCSRowDefault(title: title, decorator: decorator).view)
     }
     
     public init(view _view:UIView) {

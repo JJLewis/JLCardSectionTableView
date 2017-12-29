@@ -8,10 +8,14 @@
 
 import Foundation
 
-extension UIView {
+internal extension UIView {
     func fitToSuperView(view:UIView) {
         view.translatesAutoresizingMaskIntoConstraints = false
         self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[view]|", options: .alignAllLeft, metrics: nil, views: ["view":view]))
         self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[view]|", options: .alignAllLeft, metrics: nil, views: ["view":view]))
     }
+}
+
+public extension UIImage {
+    static let JLCSRowDecoratorRightArrow = UIImage(named: "right_arrow", in: jlcsBundle, compatibleWith: nil)!
 }
