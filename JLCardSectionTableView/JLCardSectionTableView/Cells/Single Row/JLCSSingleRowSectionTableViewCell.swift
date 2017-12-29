@@ -1,25 +1,23 @@
 //
-//  JLCSMidTableViewCell.swift
+//  JLCSSingleRowSectionTableViewCell.swift
 //  JLCardSectionTableView
 //
-//  Created by Jordan Lewis on 25/12/17.
+//  Created by Jordan Lewis on 29/12/17.
 //  Copyright © 2017 Jordan Lewis. All rights reserved.
 //
 
 import UIKit
 
-class JLCSMidTableViewCell: JLCSTableViewCell {
-
-    @IBOutlet var cardContentView:UIView!
+class JLCSSingleRowSectionTableViewCell: JLCSMidTableViewCell {
     
-    func setContent(view:UIView) {
-        cardContentView.addSubview(view)
-        cardContentView.fitToSuperView(view: view)
-    }
+    @IBOutlet var titleLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        cardContentView.layer.cornerRadius = 10
+        cardContentView.clipsToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

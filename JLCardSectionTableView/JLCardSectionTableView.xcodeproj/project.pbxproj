@@ -14,6 +14,8 @@
 		AA1CA0821FF60A1500B574C2 /* JLCSExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1CA0811FF60A1500B574C2 /* JLCSExtensions.swift */; };
 		AA1CA0851FF60BAD00B574C2 /* JLCSDefaultContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1CA0841FF60BAD00B574C2 /* JLCSDefaultContent.swift */; };
 		AA1CA0871FF616F500B574C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA1CA0861FF616F500B574C2 /* Assets.xcassets */; };
+		AA1CA08B1FF6202200B574C2 /* JLCSSingleRowSectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1CA0891FF6202200B574C2 /* JLCSSingleRowSectionTableViewCell.swift */; };
+		AA1CA08C1FF6202200B574C2 /* JLCSSingleRowSectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA1CA08A1FF6202200B574C2 /* JLCSSingleRowSectionTableViewCell.xib */; };
 		AAF129FE1FEFE78A007A3799 /* JLCardSectionTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAF129F41FEFE78A007A3799 /* JLCardSectionTableView.framework */; };
 		AAF12A031FEFE78A007A3799 /* JLCardSectionTableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF12A021FEFE78A007A3799 /* JLCardSectionTableViewTests.swift */; };
 		AAF12A051FEFE78A007A3799 /* JLCardSectionTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = AAF129F71FEFE78A007A3799 /* JLCardSectionTableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -46,6 +48,8 @@
 		AA1CA0811FF60A1500B574C2 /* JLCSExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLCSExtensions.swift; sourceTree = "<group>"; };
 		AA1CA0841FF60BAD00B574C2 /* JLCSDefaultContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLCSDefaultContent.swift; sourceTree = "<group>"; };
 		AA1CA0861FF616F500B574C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AA1CA0891FF6202200B574C2 /* JLCSSingleRowSectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLCSSingleRowSectionTableViewCell.swift; sourceTree = "<group>"; };
+		AA1CA08A1FF6202200B574C2 /* JLCSSingleRowSectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JLCSSingleRowSectionTableViewCell.xib; sourceTree = "<group>"; };
 		AAF129F41FEFE78A007A3799 /* JLCardSectionTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JLCardSectionTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAF129F71FEFE78A007A3799 /* JLCardSectionTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLCardSectionTableView.h; sourceTree = "<group>"; };
 		AAF129F81FEFE78A007A3799 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -89,6 +93,15 @@
 				AA1CA07F1FF5E81C00B574C2 /* JLCSDefaultContent.xib */,
 			);
 			path = "Default Content";
+			sourceTree = "<group>";
+		};
+		AA1CA0881FF61FE200B574C2 /* Single Row */ = {
+			isa = PBXGroup;
+			children = (
+				AA1CA0891FF6202200B574C2 /* JLCSSingleRowSectionTableViewCell.swift */,
+				AA1CA08A1FF6202200B574C2 /* JLCSSingleRowSectionTableViewCell.xib */,
+			);
+			path = "Single Row";
 			sourceTree = "<group>";
 		};
 		AAF129EA1FEFE78A007A3799 = {
@@ -138,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				1763DEF21FF1DAE200CE97FE /* JLCSTableViewCell.swift */,
+				AA1CA0881FF61FE200B574C2 /* Single Row */,
 				AAF12A1A1FF064DA007A3799 /* Top */,
 				AAF12A1B1FF06518007A3799 /* Mid */,
 				AAF12A1C1FF0651D007A3799 /* Bottom */,
@@ -288,6 +302,7 @@
 				AAF12A201FF0652E007A3799 /* JLCSBottomTableViewCell.xib in Resources */,
 				AAF12A181FF064A9007A3799 /* JLCSTopTableViewCell.xib in Resources */,
 				AA1CA0801FF5E81C00B574C2 /* JLCSDefaultContent.xib in Resources */,
+				AA1CA08C1FF6202200B574C2 /* JLCSSingleRowSectionTableViewCell.xib in Resources */,
 				AA1CA0871FF616F500B574C2 /* Assets.xcassets in Resources */,
 				AAF12A241FF0653F007A3799 /* JLCSMidTableViewCell.xib in Resources */,
 			);
@@ -317,6 +332,7 @@
 				AAF12A171FF064A9007A3799 /* JLCSTopTableViewCell.swift in Sources */,
 				1763DEF31FF1DAE200CE97FE /* JLCSTableViewCell.swift in Sources */,
 				AA1CA07B1FF5CA4000B574C2 /* JLCSConstants.swift in Sources */,
+				AA1CA08B1FF6202200B574C2 /* JLCSSingleRowSectionTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
