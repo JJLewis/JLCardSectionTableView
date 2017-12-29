@@ -48,7 +48,7 @@ public class JLCardSectionTableView: UITableView, UITableViewDelegate, UITableVi
         case .top:
             return 60
         case .mid:
-            return 70
+            return data[indexPath.section].getRow(indexPath.row - 1).height
         case .bot:
             return 40
         }

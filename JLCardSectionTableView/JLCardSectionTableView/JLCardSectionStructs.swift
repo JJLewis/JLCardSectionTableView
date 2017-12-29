@@ -9,11 +9,19 @@
 import Foundation
 
 public struct JLCSRow {
-    public let title:String!
+    let title:String?
+    let view:UIView?
+    public var height:CGFloat = 50
     public var selectedCallback:()->() = {}
     
     public init(title _title:String) {
         title = _title
+        view = nil
+    }
+    
+    public init(view _view:UIView) {
+        view = _view
+        title = nil
     }
 }
 
@@ -28,6 +36,10 @@ public struct JLCSSection {
     
     public mutating func addRow(_ row:JLCSRow) {
         rows.append(row)
+    }
+    
+    func getRow(_ index:Int) -> JLCSRow {
+        return rows[index]
     }
     
     public init(title _title:String) {
