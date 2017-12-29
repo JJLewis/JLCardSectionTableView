@@ -76,8 +76,8 @@ public class JLCardSectionTableView: UITableView, UITableViewDelegate, UITableVi
             cell = tableView.dequeueReusableCell(withIdentifier: "JLCSBottomCell", for: indexPath) as! JLCSTableViewCell
             break
         case .single:
-            cell = tableView.dequeueReusableCell(withIdentifier: "JLCSSingleRowCell", for: indexPath) as! JLCSSingleRowSectionTableViewCell
-            (cell as! JLCSSingleRowSectionTableViewCell).titleLabel.text = section.title
+            cell = tableView.dequeueReusableCell(withIdentifier: "JLCSSingleRowCell", for: indexPath) as! JLCSTopTableViewCell
+            (cell as! JLCSTopTableViewCell).titleLabel.text = section.title
             break
         }
         
