@@ -8,4 +8,4 @@
 
 import Foundation
 
-let jlcsBundle = Bundle.allFrameworks.filter {$0.bundleIdentifier == "com.jjlewis.JLCardSectionTableView"}.first!
+let jlcsBundle = Bundle(for: JLCardSectionTableView.self)
