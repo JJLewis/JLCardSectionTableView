@@ -37,6 +37,30 @@ public class JLCardSectionTableView: UITableView, UITableViewDelegate, UITableVi
         }
     }
     
+    func goBackFromSubsectionFor(row:JLCSRow, indexPath:IndexPath) {
+        if let parent_section = row.parentsection {
+            data.remove(at: indexPath.section)
+            deleteSections(IndexSet(integer: indexPath.section), with: .right)
+            data.insert(parent_section, at: indexPath.section)
+            insertSections(IndexSet(integer: indexPath.section), with: .left)
+        }
+    }
+    
+    func showSubsectionFor(row:JLCSRow, indexPath:IndexPath) {
+        if var new_section = row.subsection {
+            var back = JLCSRow(title: "Back")
+            back.parentsection = data[indexPath.section]
+            back.selectedCallback = {
+                self.goBackFromSubsectionFor(row: back, indexPath: indexPath)
+            }
+            new_section.addRow(back)
+            data.remove(at: indexPath.section)
+            deleteSections(IndexSet(integer: indexPath.section), with: .left)
+            data.insert(new_section, at: indexPath.section)
+            insertSections(IndexSet(integer: indexPath.section), with: .right)
+        }
+    }
+    
     // MARK: Data Source
     public func numberOfSections(in tableView: UITableView) -> Int {
         return data.count
@@ -84,7 +108,10 @@ public class JLCardSectionTableView: UITableView, UITableViewDelegate, UITableVi
         
         let row = section.getRow(indexPath.row)
         (cell as! JLCSTableViewCell).setContent(view: row.view)
-        (cell as! JLCSTableViewCell).tapAction = row.selectedCallback
+        (cell as! JLCSTableViewCell).tapAction = {
+            self.showSubsectionFor(row: row, indexPath: indexPath)
+            row.selectedCallback()
+        }
         return cell
     }
     

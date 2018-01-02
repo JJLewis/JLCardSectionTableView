@@ -30,6 +30,12 @@ public struct JLCSRow {
     let view:UIView
     public var height:CGFloat = 50
     public var selectedCallback:()->() = {}
+    internal var subsection:JLCSSection?
+    internal var parentsection:JLCSSection?
+    
+    public mutating func setSubsection(section:JLCSSection) {
+        subsection = section
+    }
     
     public init(title:String) {
         self.init(title: title, decorator: nil)

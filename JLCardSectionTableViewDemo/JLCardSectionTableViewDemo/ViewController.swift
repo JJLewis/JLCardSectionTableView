@@ -22,7 +22,18 @@ class ViewController: UIViewController {
         updateDetails.selectedCallback = {
             print("Hello world")
         }
-        let buyCredits = JLCSRow(title: "Buy Credits")
+        var buyCredits = JLCSRow(title: "Buy Credits")
+        
+        var creditsSection = JLCSSection(title: "Buy Credits")
+        var tenCredits = JLCSRow(title: "Buy 10 Credits")
+        var twentyCredits = JLCSRow(title: "Buy 20 Credits")
+        var thirtyCredits = JLCSRow(title: "Buy 20 Credits")
+        creditsSection.addRow(tenCredits)
+        creditsSection.addRow(twentyCredits)
+        creditsSection.addRow(thirtyCredits)
+        
+        buyCredits.setSubsection(section: creditsSection)
+        
         account.addRow(updateDetails)
         account.addRow(buyCredits)
         
