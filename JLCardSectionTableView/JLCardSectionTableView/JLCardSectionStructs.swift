@@ -26,14 +26,24 @@ private struct JLCSRowDefault {
     }
 }
 
+public struct JLCSSubSection {
+    let backButton:JLCSRow
+    let section:JLCSSection÷
+    
+    public init(section _section:JLCSSection, backRow:JLCSRow) {
+        section = _section
+        backButton = backRow
+    }
+}
+
 public struct JLCSRow {
     let view:UIView
     public var height:CGFloat = 50
     public var selectedCallback:()->() = {}
-    internal var subsection:JLCSSection?
+    internal var subsection:JLCSSubSection?
     internal var parentsection:JLCSSection?
     
-    public mutating func setSubsection(section:JLCSSection) {
+    public mutating func setSubsection(section:JLCSSubSection, backButtonTitle:String) {
         subsection = section
     }
     
