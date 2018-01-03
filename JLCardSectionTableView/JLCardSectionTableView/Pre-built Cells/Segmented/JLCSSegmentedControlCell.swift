@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class JLCSSegmentedControlCell: UIView {
+public class JLCSSegmentedControlCell: JLCSPrebuiltCellView {
     
     public var selectionChangedCallback:(UISegmentedControl)->() = {_ in }
     
@@ -18,7 +18,7 @@ public class JLCSSegmentedControlCell: UIView {
         selectionChangedCallback(sender)
     }
     
-    public class func instanceFromNib() -> JLCSSegmentedControlCell {
+    public override class func instanceFromNib() -> JLCSSegmentedControlCell {
         return jlcsBundle.loadNibNamed("JLCSSegmentedControlCell", owner: nil, options: nil)!.first as! JLCSSegmentedControlCell
     }
 }

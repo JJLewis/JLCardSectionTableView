@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class JLCSSwitchCell: UIView {
+public class JLCSSwitchCell: JLCSPrebuiltCellView {
     
     public var switchToggledCallback:(UISwitch)->() = {_ in }
     
@@ -19,7 +19,7 @@ public class JLCSSwitchCell: UIView {
         switchToggledCallback(sender)
     }
     
-    public class func instanceFromNib() -> JLCSSwitchCell {
+    public override class func instanceFromNib() -> JLCSSwitchCell {
         return jlcsBundle.loadNibNamed("JLCSSwitchCell", owner: nil, options: nil)!.first as! JLCSSwitchCell
     }
 }

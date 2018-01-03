@@ -8,11 +8,11 @@
 
 import UIKit
 
-public class JLCSTextfieldCell: UIView {
+public class JLCSTextfieldCell: JLCSPrebuiltCellView {
 
     @IBOutlet public var textfield: UITextField!
     
-    public class func instanceFromNib() -> JLCSTextfieldCell {
+    public override class func instanceFromNib() -> JLCSTextfieldCell {
         return jlcsBundle.loadNibNamed("JLCSTextfieldCell", owner: nil, options: nil)!.first as! JLCSTextfieldCell
     }
 }

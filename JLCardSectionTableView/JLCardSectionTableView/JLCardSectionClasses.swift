@@ -126,6 +126,12 @@ public class JLCSSection {
         }
     }
     
+    public func addRows(prebuiltCells _rows:[JLCSPrebuiltCellView]) {
+        for row in _rows {
+            rows.append(row.makeRowFromSelf())
+        }
+    }
+    
     internal func getRow(_ index:Int) -> JLCSRow {
         return rows[index]
     }

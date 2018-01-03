@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class JLCSSliderCell: UIView {
+public class JLCSSliderCell: JLCSPrebuiltCellView {
 
     public var sliderUpdatedCallback:(UISlider)->() = {_ in }
     
@@ -19,7 +19,7 @@ public class JLCSSliderCell: UIView {
         sliderUpdatedCallback(sender)
     }
     
-    public class func instanceFromNib() -> JLCSSliderCell {
+    public override class func instanceFromNib() -> JLCSSliderCell {
         return jlcsBundle.loadNibNamed("JLCSSliderCell", owner: nil, options: nil)!.first as! JLCSSliderCell
     }
 }
