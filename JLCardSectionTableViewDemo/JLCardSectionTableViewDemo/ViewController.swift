@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         let twentyCredits = JLCSRow(title: "Buy 20 Credits")
         let thirtyCredits = JLCSRow(title: "Buy 30 Credits")
         
-        let paywithSection = JLCSSubSection(title: "Pay With")
+        let paywithSection = JLCSSubSection(title: "Pay With", backButtonWithTitle: "Cancel")
         let master = JLCSRow(title: "Mastercard")
         let visa = JLCSRow(title: "Visa")
         let paypal = JLCSRow(title: "Paypal")

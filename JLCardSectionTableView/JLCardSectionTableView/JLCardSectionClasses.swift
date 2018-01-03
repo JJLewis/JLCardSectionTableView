@@ -55,6 +55,32 @@ public class JLCSSubSection:JLCSSection {
             return super.getRow(index)
         }
     }
+    
+    public func setBackButtonWithTitle(title:String) {
+        backButton = JLCSRow(title: title)
+    }
+    
+    // MARK: Initialisers
+    public convenience init(title _title: String) {
+        self.init(title: _title, backButtonWithTitle: "Back")
+    }
+    
+    public convenience init(title _title: String, backButtonWithTitle title:String) {
+        self.init(title: _title, rows: [], backButtonWithTitle: title)
+    }
+    
+    public convenience init(title _title: String, backButton aBackButton:JLCSRow) {
+        self.init(title: _title, rows: [], backButton: aBackButton)
+    }
+    
+    public convenience init(title _title: String, rows _rows: [JLCSRow], backButtonWithTitle title:String) {
+        self.init(title: _title, rows: _rows, backButton: JLCSRow(title: title))
+    }
+    
+    public init(title _title: String, rows _rows: [JLCSRow], backButton aBackButton:JLCSRow) {
+        super.init(title: _title, rows: _rows)
+        backButton = aBackButton
+    }
 }
 
 public class JLCSRow {
