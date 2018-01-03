@@ -8,7 +8,7 @@
 
 import Foundation
 
-private struct JLCSRowDefault {
+private class JLCSRowDefault {
     private let title:String
     private let image:UIImage?
     internal var view:JLCSDefaultContent {
@@ -26,32 +26,53 @@ private struct JLCSRowDefault {
     }
 }
 
-public struct JLCSSubSection {
-    let backButton:JLCSRow
-    let section:JLCSSection÷
+public class JLCSSubSection:JLCSSection {
+    private var _backButton:JLCSRow?
+    internal var backButton:JLCSRow {
+        get {
+            if let b = _backButton {
+                return b
+            } else {
+                _backButton = JLCSRow(title: "Back")
+                return _backButton!
+            }
+        }
+        set {
+            _backButton = newValue
+        }
+    }
     
-    public init(section _section:JLCSSection, backRow:JLCSRow) {
-        section = _section
-        backButton = backRow
+    override public var numberOfRows: Int {
+        get {
+            return rows.count + 1
+        }
+    }
+    
+    override func getRow(_ index: Int) -> JLCSRow {
+        if index == numberOfRows - 1 {
+            return backButton
+        } else {
+            return super.getRow(index)
+        }
     }
 }
 
-public struct JLCSRow {
+public class JLCSRow {
     let view:UIView
     public var height:CGFloat = 50
     public var selectedCallback:()->() = {}
     internal var subsection:JLCSSubSection?
     internal var parentsection:JLCSSection?
     
-    public mutating func setSubsection(section:JLCSSubSection, backButtonTitle:String) {
+    public func setSubsection(section:JLCSSubSection) {
         subsection = section
     }
     
-    public init(title:String) {
+    public convenience init(title:String) {
         self.init(title: title, decorator: nil)
     }
     
-    public init(title:String, decorator:UIImage?) {
+    public convenience init(title:String, decorator:UIImage?) {
         self.init(view: JLCSRowDefault(title: title, decorator: decorator).view)
     }
     
@@ -60,25 +81,31 @@ public struct JLCSRow {
     }
 }
 
-public struct JLCSSection {
+public class JLCSSection {
     public let title:String!
-    private var rows:[JLCSRow] = []
+    fileprivate var rows:[JLCSRow] = []
     public var numberOfRows:Int {
         get {
             return rows.count
         }
     }
     
-    public mutating func addRow(_ row:JLCSRow) {
+    public func addRow(_ row:JLCSRow) {
         rows.append(row)
     }
     
-    func getRow(_ index:Int) -> JLCSRow {
+    public func addRows(_ _rows:[JLCSRow]) {
+        for row in _rows {
+            rows.append(row)
+        }
+    }
+    
+    internal func getRow(_ index:Int) -> JLCSRow {
         return rows[index]
     }
     
-    public init(title _title:String) {
-        title = _title
+    public convenience init(title _title:String) {
+        self.init(title: _title, rows: [])
     }
     
     public init(title _title:String, rows _rows:[JLCSRow]) {

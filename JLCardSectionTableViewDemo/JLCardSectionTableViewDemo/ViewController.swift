@@ -17,17 +17,17 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        var account = JLCSSection(title: "Account")
-        var updateDetails = JLCSRow(title: "Update Details", decorator:UIImage.JLCSRowDecoratorRightArrow)
+        let account = JLCSSection(title: "Account")
+        let updateDetails = JLCSRow(title: "Update Details", decorator:UIImage.JLCSRowDecoratorRightArrow)
         updateDetails.selectedCallback = {
             print("Hello world")
         }
-        var buyCredits = JLCSRow(title: "Buy Credits")
+        let buyCredits = JLCSRow(title: "Buy Credits")
         
-        var creditsSection = JLCSSection(title: "Buy Credits")
-        var tenCredits = JLCSRow(title: "Buy 10 Credits")
-        var twentyCredits = JLCSRow(title: "Buy 20 Credits")
-        var thirtyCredits = JLCSRow(title: "Buy 20 Credits")
+        let creditsSection = JLCSSubSection(title: "Buy Credits")
+        let tenCredits = JLCSRow(title: "Buy 10 Credits")
+        let twentyCredits = JLCSRow(title: "Buy 20 Credits")
+        let thirtyCredits = JLCSRow(title: "Buy 20 Credits")
         creditsSection.addRow(tenCredits)
         creditsSection.addRow(twentyCredits)
         creditsSection.addRow(thirtyCredits)
@@ -37,7 +37,7 @@ class ViewController: UIViewController {
         account.addRow(updateDetails)
         account.addRow(buyCredits)
         
-        var settings = JLCSSection(title: "Settings")
+        let settings = JLCSSection(title: "Settings")
         let pushView = Bundle.main.loadNibNamed("CustomCellView", owner: self, options: nil)!.first as! CustomCellView
         pushView.titleLabel.text = "Push Notifications: Try toggle the switch"
         let pushNotifications = JLCSRow(view: pushView)
@@ -51,15 +51,15 @@ class ViewController: UIViewController {
         settings.addRow(contactus)
         settings.addRow(logout)
         
-        var about = JLCSSection(title: "About Handpic'd")
+        let about = JLCSSection(title: "About Handpic'd")
         let aboutthisapp = JLCSRow(title: "About this app")
         about.addRow(aboutthisapp)
         
-        var help = JLCSSection(title: "Help & Support")
+        let help = JLCSSection(title: "Help & Support")
         let gethelp = JLCSRow(title: "Get help/support")
         help.addRow(gethelp)
         
-        var rate = JLCSSection(title: "Rate")
+        let rate = JLCSSection(title: "Rate")
         let rateapp = JLCSRow(title: "Rate this app")
         rate.addRow(rateapp)
         

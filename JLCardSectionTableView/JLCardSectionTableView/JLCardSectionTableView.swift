@@ -37,7 +37,7 @@ public class JLCardSectionTableView: UITableView, UITableViewDelegate, UITableVi
         }
     }
     
-    func goBackFromSubsectionFor(row:JLCSRow, indexPath:IndexPath) {
+    private func goBackFromSubsectionFor(row:JLCSRow, indexPath:IndexPath) {
         if let parent_section = row.parentsection {
             data.remove(at: indexPath.section)
             deleteSections(IndexSet(integer: indexPath.section), with: .right)
@@ -46,14 +46,15 @@ public class JLCardSectionTableView: UITableView, UITableViewDelegate, UITableVi
         }
     }
     
-    func showSubsectionFor(row:JLCSRow, indexPath:IndexPath) {
-        if var new_section = row.subsection {
-            var back = JLCSRow(title: "Back")
+    private func showSubsectionFor(row:JLCSRow, indexPath:IndexPath) {
+        if let new_section = row.subsection {
+            let back = new_section.backButton
             back.parentsection = data[indexPath.section]
+            let assignedCallback = back.selectedCallback
             back.selectedCallback = {
+                assignedCallback()
                 self.goBackFromSubsectionFor(row: back, indexPath: indexPath)
             }
-            new_section.addRow(back)
             data.remove(at: indexPath.section)
             deleteSections(IndexSet(integer: indexPath.section), with: .left)
             data.insert(new_section, at: indexPath.section)

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1763DEF31FF1DAE200CE97FE /* JLCSTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1763DEF21FF1DAE200CE97FE /* JLCSTableViewCell.swift */; };
-		1763DEF51FF1DBB000CE97FE /* JLCardSectionStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1763DEF41FF1DBB000CE97FE /* JLCardSectionStructs.swift */; };
+		1763DEF51FF1DBB000CE97FE /* JLCardSectionClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1763DEF41FF1DBB000CE97FE /* JLCardSectionClasses.swift */; };
 		AA1CA07B1FF5CA4000B574C2 /* JLCSConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1CA07A1FF5CA4000B574C2 /* JLCSConstants.swift */; };
 		AA1CA0801FF5E81C00B574C2 /* JLCSDefaultContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA1CA07F1FF5E81C00B574C2 /* JLCSDefaultContent.xib */; };
 		AA1CA0821FF60A1500B574C2 /* JLCSExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1CA0811FF60A1500B574C2 /* JLCSExtensions.swift */; };
@@ -39,7 +39,7 @@
 
 /* Begin PBXFileReference section */
 		1763DEF21FF1DAE200CE97FE /* JLCSTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLCSTableViewCell.swift; sourceTree = "<group>"; };
-		1763DEF41FF1DBB000CE97FE /* JLCardSectionStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLCardSectionStructs.swift; sourceTree = "<group>"; };
+		1763DEF41FF1DBB000CE97FE /* JLCardSectionClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLCardSectionClasses.swift; sourceTree = "<group>"; };
 		AA1CA07A1FF5CA4000B574C2 /* JLCSConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLCSConstants.swift; sourceTree = "<group>"; };
 		AA1CA07F1FF5E81C00B574C2 /* JLCSDefaultContent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JLCSDefaultContent.xib; sourceTree = "<group>"; };
 		AA1CA0811FF60A1500B574C2 /* JLCSExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLCSExtensions.swift; sourceTree = "<group>"; };
@@ -122,7 +122,7 @@
 				AAF12A0E1FEFE865007A3799 /* JLCardSectionTableView.swift */,
 				AA1CA07A1FF5CA4000B574C2 /* JLCSConstants.swift */,
 				AA1CA0811FF60A1500B574C2 /* JLCSExtensions.swift */,
-				1763DEF41FF1DBB000CE97FE /* JLCardSectionStructs.swift */,
+				1763DEF41FF1DBB000CE97FE /* JLCardSectionClasses.swift */,
 				AAF12A251FF0660B007A3799 /* Generics */,
 				AAF12A191FF064D0007A3799 /* Cells */,
 				AA1CA0861FF616F500B574C2 /* Assets.xcassets */,
@@ -317,7 +317,7 @@
 				AA1CA0821FF60A1500B574C2 /* JLCSExtensions.swift in Sources */,
 				AAF12A271FF0662B007A3799 /* JLRoundedShadowView.swift in Sources */,
 				AAF12A0F1FEFE865007A3799 /* JLCardSectionTableView.swift in Sources */,
-				1763DEF51FF1DBB000CE97FE /* JLCardSectionStructs.swift in Sources */,
+				1763DEF51FF1DBB000CE97FE /* JLCardSectionClasses.swift in Sources */,
 				AAF12A171FF064A9007A3799 /* JLCSTopTableViewCell.swift in Sources */,
 				1763DEF31FF1DAE200CE97FE /* JLCSTableViewCell.swift in Sources */,
 				AA1CA07B1FF5CA4000B574C2 /* JLCSConstants.swift in Sources */,
