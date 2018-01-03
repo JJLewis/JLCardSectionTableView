@@ -12,8 +12,8 @@ public class JLCSSwitchCell: UIView {
     
     public var switchToggledCallback:(UISwitch)->() = {_ in }
     
-    @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var toggle: UISwitch!
+    @IBOutlet public var titleLabel: UILabel!
+    @IBOutlet public var toggle: UISwitch!
     
     @IBAction func switchToggled(_ sender:UISwitch) {
         switchToggledCallback(sender)

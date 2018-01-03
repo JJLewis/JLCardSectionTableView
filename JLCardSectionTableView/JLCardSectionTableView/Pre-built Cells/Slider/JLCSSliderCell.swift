@@ -12,8 +12,8 @@ public class JLCSSliderCell: UIView {
 
     public var sliderUpdatedCallback:(UISlider)->() = {_ in }
     
-    @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var slider: UISlider!
+    @IBOutlet public var titleLabel: UILabel!
+    @IBOutlet public var slider: UISlider!
     
     @IBAction func sliderValueChanged(_ sender: UISlider) {
         sliderUpdatedCallback(sender)

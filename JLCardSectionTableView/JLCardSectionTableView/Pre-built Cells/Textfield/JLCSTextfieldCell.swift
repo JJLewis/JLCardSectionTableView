@@ -10,7 +10,7 @@ import UIKit
 
 public class JLCSTextfieldCell: UIView {
 
-    @IBOutlet var textfield: UITextField!
+    @IBOutlet public var textfield: UITextField!
     
     public class func instanceFromNib() -> JLCSTextfieldCell {
         return jlcsBundle.loadNibNamed("JLCSTextfieldCell", owner: nil, options: nil)!.first as! JLCSTextfieldCell

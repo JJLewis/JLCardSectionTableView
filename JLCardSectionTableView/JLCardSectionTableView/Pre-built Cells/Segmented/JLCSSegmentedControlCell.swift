@@ -12,7 +12,7 @@ public class JLCSSegmentedControlCell: UIView {
     
     public var selectionChangedCallback:(UISegmentedControl)->() = {_ in }
     
-    @IBOutlet var segmentedControl: UISegmentedControl!
+    @IBOutlet public var segmentedControl: UISegmentedControl!
     
     @IBAction func segmentedSelectionChanged(_ sender: UISegmentedControl) {
         selectionChangedCallback(sender)
