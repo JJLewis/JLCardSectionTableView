@@ -17,6 +17,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        let prebuiltsection = JLCSSection(title: "Pre-Built Cells")
+        let toggle = JLCSRow(view: JLCSSwitchCell.instanceFromNib())
+        prebuiltsection.addRow(toggle)
+        
         let account = JLCSSection(title: "Account")
         let updateDetails = JLCSRow(title: "Update Details", decorator:UIImage.JLCSRowDecoratorRightArrow)
         updateDetails.selectedCallback = {
@@ -73,7 +77,7 @@ class ViewController: UIViewController {
         let rateapp = JLCSRow(title: "Rate this app")
         rate.addRow(rateapp)
         
-        table.setTableData([account, settings, about, help, rate])
+        table.setTableData([prebuiltsection, account, settings, about, help, rate])
     }
 
     override func didReceiveMemoryWarning() {
