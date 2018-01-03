@@ -60,7 +60,7 @@ public class JLCSPickerCell: JLCSExpandingCell, UIPickerViewDataSource, UIPicker
     }
     
     public override func awakeFromNib() {
-        super.awakeFromNib()
         self.alternateHeight = 212
+        super.awakeFromNib()
     }
 }
