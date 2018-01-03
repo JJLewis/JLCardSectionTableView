@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "JLCardSectionTableView"
-  s.version      = "1.1.0"
+  s.version      = "1.2.0"
   s.summary      = "A tableview where sections are shown as cards. Custom cells are supported for full customisability."
 
   # This description is used to generate tags and improve search results.
