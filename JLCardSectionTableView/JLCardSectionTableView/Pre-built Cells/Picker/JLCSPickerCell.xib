@@ -12,54 +12,77 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="JLCSPickerCell" customModule="JLCardSectionTableView" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="212"/>
+        <view contentMode="scaleToFill" id="TKj-lE-TfI" customClass="JLCSPickerCell" customModule="JLCardSectionTableView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="63H-l3-neh">
-                    <rect key="frame" x="10" y="0.0" width="355" height="50"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uva-Jd-tgJ">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INj-1M-H90">
-                            <rect key="frame" x="0.0" y="0.0" width="42" height="50"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6I2-Xn-arH">
-                            <rect key="frame" x="309" y="0.0" width="46" height="50"/>
-                            <state key="normal" title="Button"/>
-                            <connections>
-                                <action selector="buttonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="9Y3-Gp-hZ2"/>
-                            </connections>
-                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="Evc-KL-zQN">
+                            <rect key="frame" x="10" y="0.0" width="355" height="50"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HID-Nt-0An">
+                                    <rect key="frame" x="0.0" y="0.0" width="42" height="50"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFy-sR-dgA">
+                                    <rect key="frame" x="309" y="0.0" width="46" height="50"/>
+                                    <state key="normal" title="Button"/>
+                                    <connections>
+                                        <action selector="buttonPressed:" destination="TKj-lE-TfI" eventType="touchUpInside" id="plw-6N-JrJ"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
                     </subviews>
-                </stackView>
-                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Kv-VE-nZ2">
-                    <rect key="frame" x="0.0" y="50" width="375" height="162"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="162" id="484-9U-TaI"/>
+                        <constraint firstAttribute="trailing" secondItem="Evc-KL-zQN" secondAttribute="trailing" constant="10" id="5Hg-XU-fQd"/>
+                        <constraint firstItem="Evc-KL-zQN" firstAttribute="leading" secondItem="Uva-Jd-tgJ" secondAttribute="leading" constant="10" id="Dvt-SC-6ih"/>
+                        <constraint firstAttribute="height" constant="50" id="dj3-JN-5aK"/>
+                        <constraint firstAttribute="bottom" secondItem="Evc-KL-zQN" secondAttribute="bottom" id="h9U-wN-985"/>
+                        <constraint firstItem="Evc-KL-zQN" firstAttribute="top" secondItem="Uva-Jd-tgJ" secondAttribute="top" id="zGK-oq-yjW"/>
                     </constraints>
-                </pickerView>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bEH-fp-iDU">
+                    <rect key="frame" x="0.0" y="50" width="375" height="200"/>
+                    <subviews>
+                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UiI-cw-DEg">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                        </pickerView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="UiI-cw-DEg" secondAttribute="bottom" id="EKu-C3-j9Z"/>
+                        <constraint firstItem="UiI-cw-DEg" firstAttribute="top" secondItem="bEH-fp-iDU" secondAttribute="top" id="WRE-9D-RGo"/>
+                        <constraint firstItem="UiI-cw-DEg" firstAttribute="leading" secondItem="bEH-fp-iDU" secondAttribute="leading" id="Zmd-7e-AKI"/>
+                        <constraint firstAttribute="trailing" secondItem="UiI-cw-DEg" secondAttribute="trailing" id="qsp-VU-IzK"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="3Kv-VE-nZ2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="50" id="2GQ-EP-V4Z"/>
-                <constraint firstItem="3Kv-VE-nZ2" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" priority="750" id="8Gw-oH-dKz"/>
-                <constraint firstItem="3Kv-VE-nZ2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Vyb-YO-gdt"/>
-                <constraint firstItem="63H-l3-neh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="bc6-7O-JxX"/>
-                <constraint firstItem="3Kv-VE-nZ2" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="i3Q-Dv-E7i"/>
-                <constraint firstItem="63H-l3-neh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="iEV-J2-37X"/>
-                <constraint firstItem="3Kv-VE-nZ2" firstAttribute="top" secondItem="63H-l3-neh" secondAttribute="bottom" id="pRT-FX-Pi4"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="63H-l3-neh" secondAttribute="trailing" constant="10" id="sQJ-4b-dc4"/>
+                <constraint firstItem="Uva-Jd-tgJ" firstAttribute="top" secondItem="TKj-lE-TfI" secondAttribute="top" id="2lP-kk-pqt"/>
+                <constraint firstItem="Uva-Jd-tgJ" firstAttribute="leading" secondItem="TKj-lE-TfI" secondAttribute="leading" id="40y-Xh-Ics"/>
+                <constraint firstItem="bEH-fp-iDU" firstAttribute="bottom" secondItem="v2L-hV-1E1" secondAttribute="bottom" priority="750" id="AeW-uj-ZTk"/>
+                <constraint firstItem="bEH-fp-iDU" firstAttribute="leading" secondItem="v2L-hV-1E1" secondAttribute="leading" id="Bc6-wt-Lys"/>
+                <constraint firstItem="Uva-Jd-tgJ" firstAttribute="bottom" secondItem="bEH-fp-iDU" secondAttribute="top" id="fdp-aA-BpB"/>
+                <constraint firstItem="v2L-hV-1E1" firstAttribute="trailing" secondItem="bEH-fp-iDU" secondAttribute="trailing" id="wzZ-6A-CHh"/>
+                <constraint firstItem="v2L-hV-1E1" firstAttribute="trailing" secondItem="Uva-Jd-tgJ" secondAttribute="trailing" id="xej-TQ-J71"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <viewLayoutGuide key="safeArea" id="v2L-hV-1E1"/>
             <connections>
-                <outlet property="button" destination="6I2-Xn-arH" id="GjO-Fi-mPo"/>
-                <outlet property="picker" destination="3Kv-VE-nZ2" id="ySL-Dg-yA8"/>
-                <outlet property="titleLabel" destination="INj-1M-H90" id="iHM-0H-ooW"/>
+                <outlet property="button" destination="eFy-sR-dgA" id="Bnr-wb-kaK"/>
+                <outlet property="expandedView" destination="bEH-fp-iDU" id="99N-qa-ckl"/>
+                <outlet property="minimisedHeightConstraint" destination="dj3-JN-5aK" id="ENV-6l-Fk2"/>
+                <outlet property="minimisedView" destination="Uva-Jd-tgJ" id="ZcH-H9-bLw"/>
+                <outlet property="picker" destination="UiI-cw-DEg" id="xyz-s6-4jq"/>
+                <outlet property="titleLabel" destination="HID-Nt-0An" id="lcJ-oZ-GJy"/>
             </connections>
-            <point key="canvasLocation" x="25.5" y="118"/>
         </view>
     </objects>
 </document>

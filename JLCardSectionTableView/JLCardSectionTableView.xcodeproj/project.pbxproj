@@ -18,6 +18,8 @@
 		AA7BA3991FFCED2200A2F658 /* JLCSPrebuiltCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7BA3981FFCED2200A2F658 /* JLCSPrebuiltCellView.swift */; };
 		AA7BA39C1FFD014600A2F658 /* JLCSPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7BA39B1FFD014600A2F658 /* JLCSPickerCell.swift */; };
 		AA7BA39E1FFD015400A2F658 /* JLCSPickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA7BA39D1FFD015400A2F658 /* JLCSPickerCell.xib */; };
+		AA7BA3A31FFD084800A2F658 /* JLCSExpandingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7BA3A21FFD084800A2F658 /* JLCSExpandingCell.swift */; };
+		AA7BA3A51FFD087800A2F658 /* JLCSExpandingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA7BA3A41FFD087800A2F658 /* JLCSExpandingCell.xib */; };
 		AAB637801FFC8ECC008B0C2E /* JLCSSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB6377F1FFC8ECC008B0C2E /* JLCSSwitchCell.swift */; };
 		AAB637821FFC8ED8008B0C2E /* JLCSSwitchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAB637811FFC8ED8008B0C2E /* JLCSSwitchCell.xib */; };
 		AAF129FE1FEFE78A007A3799 /* JLCardSectionTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAF129F41FEFE78A007A3799 /* JLCardSectionTableView.framework */; };
@@ -60,6 +62,8 @@
 		AA7BA3981FFCED2200A2F658 /* JLCSPrebuiltCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLCSPrebuiltCellView.swift; sourceTree = "<group>"; };
 		AA7BA39B1FFD014600A2F658 /* JLCSPickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLCSPickerCell.swift; sourceTree = "<group>"; };
 		AA7BA39D1FFD015400A2F658 /* JLCSPickerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JLCSPickerCell.xib; sourceTree = "<group>"; };
+		AA7BA3A21FFD084800A2F658 /* JLCSExpandingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLCSExpandingCell.swift; sourceTree = "<group>"; };
+		AA7BA3A41FFD087800A2F658 /* JLCSExpandingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JLCSExpandingCell.xib; sourceTree = "<group>"; };
 		AAB6377F1FFC8ECC008B0C2E /* JLCSSwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLCSSwitchCell.swift; sourceTree = "<group>"; };
 		AAB637811FFC8ED8008B0C2E /* JLCSSwitchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JLCSSwitchCell.xib; sourceTree = "<group>"; };
 		AAF129F41FEFE78A007A3799 /* JLCardSectionTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JLCardSectionTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,10 +132,20 @@
 			path = Picker;
 			sourceTree = "<group>";
 		};
+		AA7BA3A11FFD084800A2F658 /* Expanding */ = {
+			isa = PBXGroup;
+			children = (
+				AA7BA3A21FFD084800A2F658 /* JLCSExpandingCell.swift */,
+				AA7BA3A41FFD087800A2F658 /* JLCSExpandingCell.xib */,
+			);
+			path = Expanding;
+			sourceTree = "<group>";
+		};
 		AAB6377C1FFC8E52008B0C2E /* Pre-built Cells */ = {
 			isa = PBXGroup;
 			children = (
 				AA7BA3981FFCED2200A2F658 /* JLCSPrebuiltCellView.swift */,
+				AA7BA3A11FFD084800A2F658 /* Expanding */,
 				AA7BA39A1FFD013400A2F658 /* Picker */,
 				AAF609E11FFCBC9A0090DBC5 /* Segmented */,
 				AAF609DC1FFCB93A0090DBC5 /* Slider */,
@@ -380,6 +394,7 @@
 				AA1CA0871FF616F500B574C2 /* Assets.xcassets in Resources */,
 				AA7BA39E1FFD015400A2F658 /* JLCSPickerCell.xib in Resources */,
 				AAF609D91FFC961F0090DBC5 /* JLCSTextfieldCell.xib in Resources */,
+				AA7BA3A51FFD087800A2F658 /* JLCSExpandingCell.xib in Resources */,
 				AAF609E51FFCBE450090DBC5 /* JLCSSegmentedControlCell.xib in Resources */,
 				AAF12A241FF0653F007A3799 /* JLCSMidTableViewCell.xib in Resources */,
 			);
@@ -407,6 +422,7 @@
 				AA1CA0821FF60A1500B574C2 /* JLCSExtensions.swift in Sources */,
 				AAF12A271FF0662B007A3799 /* JLRoundedShadowView.swift in Sources */,
 				AAF12A0F1FEFE865007A3799 /* JLCardSectionTableView.swift in Sources */,
+				AA7BA3A31FFD084800A2F658 /* JLCSExpandingCell.swift in Sources */,
 				AAF609DE1FFCB9600090DBC5 /* JLCSSliderCell.swift in Sources */,
 				1763DEF51FF1DBB000CE97FE /* JLCardSectionClasses.swift in Sources */,
 				AAF12A171FF064A9007A3799 /* JLCSTopTableViewCell.swift in Sources */,

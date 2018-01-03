@@ -8,21 +8,22 @@
 
 import UIKit
 
-public class JLCSPickerCell: JLCSPrebuiltCellView {
+public class JLCSPickerCell: JLCSExpandingCell {
 
-    internal let expandedHeight:CGFloat = 212
-    
     @IBOutlet public var titleLabel: UILabel!
     @IBOutlet public var button: UIButton!
     @IBOutlet public var picker: UIPickerView!
     
-    internal var toExpandCallback:(CGFloat)->() = {_ in }
-    
     @IBAction func buttonPressed(_ sender:UIButton) {
-        toExpandCallback(expandedHeight)
+        toggleExpandCallback(self.alternateHeight)
     }
     
     public override class func instanceFromNib() -> JLCSPickerCell {
         return jlcsBundle.loadNibNamed("JLCSPickerCell", owner: nil, options: nil)!.first as! JLCSPickerCell
+    }
+    
+    public override func awakeFromNib() {
+        super.awakeFromNib()
+        self.alternateHeight = 212
     }
 }

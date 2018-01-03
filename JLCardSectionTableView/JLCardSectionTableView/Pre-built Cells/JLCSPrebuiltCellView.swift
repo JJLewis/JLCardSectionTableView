@@ -9,11 +9,11 @@ import UIKit
 
 public class JLCSPrebuiltCellView: UIView {
     
-    let height:CGFloat = 50
+    let requiredHeight:CGFloat = 50
     
     public func makeRowFromSelf() -> JLCSRow {
         let row = JLCSRow(view: self)
-        row.height = height
+        row.height = requiredHeight
         return row
     }
     

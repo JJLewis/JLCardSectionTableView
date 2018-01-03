@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="JLCSExpandingCell" customModule="JLCardSectionTableView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fTP-hp-6sH">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="dLm-hh-sh5"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pra-F0-hS6">
+                    <rect key="frame" x="0.0" y="50" width="375" height="200"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="fTP-hp-6sH" secondAttribute="trailing" id="Qje-6B-r2O"/>
+                <constraint firstItem="fTP-hp-6sH" firstAttribute="bottom" secondItem="Pra-F0-hS6" secondAttribute="top" id="bay-Ud-faH"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Pra-F0-hS6" secondAttribute="trailing" id="kIO-Zk-GSP"/>
+                <constraint firstItem="fTP-hp-6sH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="obs-f2-cre"/>
+                <constraint firstItem="Pra-F0-hS6" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" priority="750" id="xBM-Bl-5Vy"/>
+                <constraint firstItem="fTP-hp-6sH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="xJm-ml-ETx"/>
+                <constraint firstItem="Pra-F0-hS6" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="yar-pX-l34"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="expandedView" destination="Pra-F0-hS6" id="ih7-3T-qmj"/>
+                <outlet property="minimisedHeightConstraint" destination="dLm-hh-sh5" id="Xru-5f-yiJ"/>
+                <outlet property="minimisedView" destination="fTP-hp-6sH" id="QuJ-uz-cYB"/>
+            </connections>
+        </view>
+    </objects>
+</document>
