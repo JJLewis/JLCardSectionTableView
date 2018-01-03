@@ -113,6 +113,14 @@ public class JLCardSectionTableView: UITableView, UITableViewDelegate, UITableVi
             self.showSubsectionFor(row: row, indexPath: indexPath)
             row.selectedCallback()
         }
+        if let expandingRow = row.view as? JLCSPickerCell {
+            expandingRow.toExpandCallback = {
+                newHeight in
+                self.beginUpdates()
+                row.height = newHeight
+                self.endUpdates()
+            }
+        }
         return cell
     }
     

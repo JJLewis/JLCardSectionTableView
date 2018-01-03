@@ -16,6 +16,8 @@
 		AA1CA0871FF616F500B574C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA1CA0861FF616F500B574C2 /* Assets.xcassets */; };
 		AA1CA08C1FF6202200B574C2 /* JLCSSingleRowSectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA1CA08A1FF6202200B574C2 /* JLCSSingleRowSectionTableViewCell.xib */; };
 		AA7BA3991FFCED2200A2F658 /* JLCSPrebuiltCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7BA3981FFCED2200A2F658 /* JLCSPrebuiltCellView.swift */; };
+		AA7BA39C1FFD014600A2F658 /* JLCSPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7BA39B1FFD014600A2F658 /* JLCSPickerCell.swift */; };
+		AA7BA39E1FFD015400A2F658 /* JLCSPickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA7BA39D1FFD015400A2F658 /* JLCSPickerCell.xib */; };
 		AAB637801FFC8ECC008B0C2E /* JLCSSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB6377F1FFC8ECC008B0C2E /* JLCSSwitchCell.swift */; };
 		AAB637821FFC8ED8008B0C2E /* JLCSSwitchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAB637811FFC8ED8008B0C2E /* JLCSSwitchCell.xib */; };
 		AAF129FE1FEFE78A007A3799 /* JLCardSectionTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAF129F41FEFE78A007A3799 /* JLCardSectionTableView.framework */; };
@@ -56,6 +58,8 @@
 		AA1CA0861FF616F500B574C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA1CA08A1FF6202200B574C2 /* JLCSSingleRowSectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JLCSSingleRowSectionTableViewCell.xib; sourceTree = "<group>"; };
 		AA7BA3981FFCED2200A2F658 /* JLCSPrebuiltCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLCSPrebuiltCellView.swift; sourceTree = "<group>"; };
+		AA7BA39B1FFD014600A2F658 /* JLCSPickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLCSPickerCell.swift; sourceTree = "<group>"; };
+		AA7BA39D1FFD015400A2F658 /* JLCSPickerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JLCSPickerCell.xib; sourceTree = "<group>"; };
 		AAB6377F1FFC8ECC008B0C2E /* JLCSSwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLCSSwitchCell.swift; sourceTree = "<group>"; };
 		AAB637811FFC8ED8008B0C2E /* JLCSSwitchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JLCSSwitchCell.xib; sourceTree = "<group>"; };
 		AAF129F41FEFE78A007A3799 /* JLCardSectionTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JLCardSectionTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,10 +119,20 @@
 			path = "Single Row";
 			sourceTree = "<group>";
 		};
+		AA7BA39A1FFD013400A2F658 /* Picker */ = {
+			isa = PBXGroup;
+			children = (
+				AA7BA39B1FFD014600A2F658 /* JLCSPickerCell.swift */,
+				AA7BA39D1FFD015400A2F658 /* JLCSPickerCell.xib */,
+			);
+			path = Picker;
+			sourceTree = "<group>";
+		};
 		AAB6377C1FFC8E52008B0C2E /* Pre-built Cells */ = {
 			isa = PBXGroup;
 			children = (
 				AA7BA3981FFCED2200A2F658 /* JLCSPrebuiltCellView.swift */,
+				AA7BA39A1FFD013400A2F658 /* Picker */,
 				AAF609E11FFCBC9A0090DBC5 /* Segmented */,
 				AAF609DC1FFCB93A0090DBC5 /* Slider */,
 				AA1CA0831FF60B9A00B574C2 /* Default */,
@@ -364,6 +378,7 @@
 				AA1CA0801FF5E81C00B574C2 /* JLCSDefaultContent.xib in Resources */,
 				AA1CA08C1FF6202200B574C2 /* JLCSSingleRowSectionTableViewCell.xib in Resources */,
 				AA1CA0871FF616F500B574C2 /* Assets.xcassets in Resources */,
+				AA7BA39E1FFD015400A2F658 /* JLCSPickerCell.xib in Resources */,
 				AAF609D91FFC961F0090DBC5 /* JLCSTextfieldCell.xib in Resources */,
 				AAF609E51FFCBE450090DBC5 /* JLCSSegmentedControlCell.xib in Resources */,
 				AAF12A241FF0653F007A3799 /* JLCSMidTableViewCell.xib in Resources */,
@@ -385,6 +400,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA1CA0851FF60BAD00B574C2 /* JLCSDefaultContent.swift in Sources */,
+				AA7BA39C1FFD014600A2F658 /* JLCSPickerCell.swift in Sources */,
 				AAF609D71FFC96130090DBC5 /* JLCSTextfieldCell.swift in Sources */,
 				AA7BA3991FFCED2200A2F658 /* JLCSPrebuiltCellView.swift in Sources */,
 				AAF609E31FFCBE3B0090DBC5 /* JLCSSegmentedControlCell.swift in Sources */,

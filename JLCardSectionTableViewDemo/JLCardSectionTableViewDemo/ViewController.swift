@@ -26,6 +26,9 @@ class ViewController: UIViewController {
         prebuiltsection.addRow(slider)
         let segmented = JLCSRow(view: JLCSSegmentedControlCell.instanceFromNib())
         prebuiltsection.addRow(segmented)
+        let picker = JLCSPickerCell.instanceFromNib().makeRowFromSelf()
+        prebuiltsection.addRow(picker)
+        
         
         let account = JLCSSection(title: "Account")
         let updateDetails = JLCSRow(title: "Update Details", decorator:UIImage.JLCSRowDecoratorRightArrow)
