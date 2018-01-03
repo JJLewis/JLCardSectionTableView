@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "JLCardSectionTableView"
-  s.version      = "1.0.0"
-  s.summary      = "A tableview were sections are shown as cards. Custom cells are supported for full customisability."
+  s.version      = "1.1.0"
+  s.summary      = "A tableview where sections are shown as cards. Custom cells are supported for full customisability."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -27,6 +27,7 @@ Pod::Spec.new do |s|
   s.description  = <<-DESC
 A custom tableview class where sections are displayed as cards and rows as the content.
 This supports headers, and custom rows.
+Support for sub-sections to be more organised.
 Uses auto-layout.
                    DESC
 
