@@ -24,6 +24,8 @@ class ViewController: UIViewController {
         prebuiltsection.addRow(textfield)
         let slider = JLCSRow(view: JLCSSliderCell.instanceFromNib())
         prebuiltsection.addRow(slider)
+        let segmented = JLCSRow(view: JLCSSegmentedControlCell.instanceFromNib())
+        prebuiltsection.addRow(segmented)
         
         let account = JLCSSection(title: "Account")
         let updateDetails = JLCSRow(title: "Update Details", decorator:UIImage.JLCSRowDecoratorRightArrow)

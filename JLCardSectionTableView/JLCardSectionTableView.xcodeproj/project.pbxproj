@@ -31,6 +31,8 @@
 		AAF609D91FFC961F0090DBC5 /* JLCSTextfieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAF609D81FFC961F0090DBC5 /* JLCSTextfieldCell.xib */; };
 		AAF609DE1FFCB9600090DBC5 /* JLCSSliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF609DD1FFCB9600090DBC5 /* JLCSSliderCell.swift */; };
 		AAF609E01FFCB9680090DBC5 /* JLCSSliderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAF609DF1FFCB9680090DBC5 /* JLCSSliderCell.xib */; };
+		AAF609E31FFCBE3B0090DBC5 /* JLCSSegmentedControlCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF609E21FFCBE3B0090DBC5 /* JLCSSegmentedControlCell.swift */; };
+		AAF609E51FFCBE450090DBC5 /* JLCSSegmentedControlCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAF609E41FFCBE450090DBC5 /* JLCSSegmentedControlCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		AAF609D81FFC961F0090DBC5 /* JLCSTextfieldCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JLCSTextfieldCell.xib; sourceTree = "<group>"; };
 		AAF609DD1FFCB9600090DBC5 /* JLCSSliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLCSSliderCell.swift; sourceTree = "<group>"; };
 		AAF609DF1FFCB9680090DBC5 /* JLCSSliderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JLCSSliderCell.xib; sourceTree = "<group>"; };
+		AAF609E21FFCBE3B0090DBC5 /* JLCSSegmentedControlCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLCSSegmentedControlCell.swift; sourceTree = "<group>"; };
+		AAF609E41FFCBE450090DBC5 /* JLCSSegmentedControlCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JLCSSegmentedControlCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,7 @@
 		AAB6377C1FFC8E52008B0C2E /* Pre-built Cells */ = {
 			isa = PBXGroup;
 			children = (
+				AAF609E11FFCBC9A0090DBC5 /* Segmented */,
 				AAF609DC1FFCB93A0090DBC5 /* Slider */,
 				AA1CA0831FF60B9A00B574C2 /* Default */,
 				AAB6377E1FFC8E6A008B0C2E /* Textfield */,
@@ -245,6 +250,15 @@
 			path = Slider;
 			sourceTree = "<group>";
 		};
+		AAF609E11FFCBC9A0090DBC5 /* Segmented */ = {
+			isa = PBXGroup;
+			children = (
+				AAF609E21FFCBE3B0090DBC5 /* JLCSSegmentedControlCell.swift */,
+				AAF609E41FFCBE450090DBC5 /* JLCSSegmentedControlCell.xib */,
+			);
+			path = Segmented;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -348,6 +362,7 @@
 				AA1CA08C1FF6202200B574C2 /* JLCSSingleRowSectionTableViewCell.xib in Resources */,
 				AA1CA0871FF616F500B574C2 /* Assets.xcassets in Resources */,
 				AAF609D91FFC961F0090DBC5 /* JLCSTextfieldCell.xib in Resources */,
+				AAF609E51FFCBE450090DBC5 /* JLCSSegmentedControlCell.xib in Resources */,
 				AAF12A241FF0653F007A3799 /* JLCSMidTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,6 +383,7 @@
 			files = (
 				AA1CA0851FF60BAD00B574C2 /* JLCSDefaultContent.swift in Sources */,
 				AAF609D71FFC96130090DBC5 /* JLCSTextfieldCell.swift in Sources */,
+				AAF609E31FFCBE3B0090DBC5 /* JLCSSegmentedControlCell.swift in Sources */,
 				AA1CA0821FF60A1500B574C2 /* JLCSExtensions.swift in Sources */,
 				AAF12A271FF0662B007A3799 /* JLRoundedShadowView.swift in Sources */,
 				AAF12A0F1FEFE865007A3799 /* JLCardSectionTableView.swift in Sources */,
