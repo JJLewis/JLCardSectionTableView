@@ -27,6 +27,8 @@
 		AAF12A241FF0653F007A3799 /* JLCSMidTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAF12A221FF0653F007A3799 /* JLCSMidTableViewCell.xib */; };
 		AAF12A271FF0662B007A3799 /* JLRoundedShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF12A261FF0662B007A3799 /* JLRoundedShadowView.swift */; };
 		AAF12A2A1FF0663D007A3799 /* JLRoundedShadowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAF12A291FF0663D007A3799 /* JLRoundedShadowView.xib */; };
+		AAF609D71FFC96130090DBC5 /* JLCSTextfieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF609D61FFC96130090DBC5 /* JLCSTextfieldCell.swift */; };
+		AAF609D91FFC961F0090DBC5 /* JLCSTextfieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAF609D81FFC961F0090DBC5 /* JLCSTextfieldCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		AAF12A221FF0653F007A3799 /* JLCSMidTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JLCSMidTableViewCell.xib; sourceTree = "<group>"; };
 		AAF12A261FF0662B007A3799 /* JLRoundedShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLRoundedShadowView.swift; sourceTree = "<group>"; };
 		AAF12A291FF0663D007A3799 /* JLRoundedShadowView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JLRoundedShadowView.xib; sourceTree = "<group>"; };
+		AAF609D61FFC96130090DBC5 /* JLCSTextfieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLCSTextfieldCell.swift; sourceTree = "<group>"; };
+		AAF609D81FFC961F0090DBC5 /* JLCSTextfieldCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JLCSTextfieldCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +127,8 @@
 		AAB6377E1FFC8E6A008B0C2E /* Textfield */ = {
 			isa = PBXGroup;
 			children = (
+				AAF609D61FFC96130090DBC5 /* JLCSTextfieldCell.swift */,
+				AAF609D81FFC961F0090DBC5 /* JLCSTextfieldCell.xib */,
 			);
 			path = Textfield;
 			sourceTree = "<group>";
@@ -326,6 +332,7 @@
 				AA1CA0801FF5E81C00B574C2 /* JLCSDefaultContent.xib in Resources */,
 				AA1CA08C1FF6202200B574C2 /* JLCSSingleRowSectionTableViewCell.xib in Resources */,
 				AA1CA0871FF616F500B574C2 /* Assets.xcassets in Resources */,
+				AAF609D91FFC961F0090DBC5 /* JLCSTextfieldCell.xib in Resources */,
 				AAF12A241FF0653F007A3799 /* JLCSMidTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,6 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA1CA0851FF60BAD00B574C2 /* JLCSDefaultContent.swift in Sources */,
+				AAF609D71FFC96130090DBC5 /* JLCSTextfieldCell.swift in Sources */,
 				AA1CA0821FF60A1500B574C2 /* JLCSExtensions.swift in Sources */,
 				AAF12A271FF0662B007A3799 /* JLRoundedShadowView.swift in Sources */,
 				AAF12A0F1FEFE865007A3799 /* JLCardSectionTableView.swift in Sources */,

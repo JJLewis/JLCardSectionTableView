@@ -20,6 +20,8 @@ class ViewController: UIViewController {
         let prebuiltsection = JLCSSection(title: "Pre-Built Cells")
         let toggle = JLCSRow(view: JLCSSwitchCell.instanceFromNib())
         prebuiltsection.addRow(toggle)
+        let textfield = JLCSRow(view: JLCSTextfieldCell.instanceFromNib())
+        prebuiltsection.addRow(textfield)
         
         let account = JLCSSection(title: "Account")
         let updateDetails = JLCSRow(title: "Update Details", decorator:UIImage.JLCSRowDecoratorRightArrow)
