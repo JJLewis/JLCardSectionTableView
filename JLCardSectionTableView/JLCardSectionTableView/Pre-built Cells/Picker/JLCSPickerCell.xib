@@ -52,11 +52,16 @@
                     <subviews>
                         <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UiI-cw-DEg">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                            <connections>
+                                <outlet property="dataSource" destination="TKj-lE-TfI" id="EYO-3n-G1p"/>
+                                <outlet property="delegate" destination="TKj-lE-TfI" id="bdx-bS-24P"/>
+                            </connections>
                         </pickerView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="UiI-cw-DEg" secondAttribute="bottom" id="EKu-C3-j9Z"/>
+                        <constraint firstAttribute="height" constant="200" id="Vld-fF-Ilz"/>
                         <constraint firstItem="UiI-cw-DEg" firstAttribute="top" secondItem="bEH-fp-iDU" secondAttribute="top" id="WRE-9D-RGo"/>
                         <constraint firstItem="UiI-cw-DEg" firstAttribute="leading" secondItem="bEH-fp-iDU" secondAttribute="leading" id="Zmd-7e-AKI"/>
                         <constraint firstAttribute="trailing" secondItem="UiI-cw-DEg" secondAttribute="trailing" id="qsp-VU-IzK"/>
@@ -77,6 +82,7 @@
             <viewLayoutGuide key="safeArea" id="v2L-hV-1E1"/>
             <connections>
                 <outlet property="button" destination="eFy-sR-dgA" id="Bnr-wb-kaK"/>
+                <outlet property="expandedHeightConstraint" destination="Vld-fF-Ilz" id="4ii-66-aG8"/>
                 <outlet property="expandedView" destination="bEH-fp-iDU" id="99N-qa-ckl"/>
                 <outlet property="minimisedHeightConstraint" destination="dj3-JN-5aK" id="ENV-6l-Fk2"/>
                 <outlet property="minimisedView" destination="Uva-Jd-tgJ" id="ZcH-H9-bLw"/>

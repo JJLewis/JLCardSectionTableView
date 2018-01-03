@@ -26,8 +26,10 @@ class ViewController: UIViewController {
         prebuiltsection.addRow(slider)
         let segmented = JLCSRow(view: JLCSSegmentedControlCell.instanceFromNib())
         prebuiltsection.addRow(segmented)
-        let picker = JLCSPickerCell.instanceFromNib().makeRowFromSelf()
-        prebuiltsection.addRow(picker)
+        let picker = JLCSPickerCell.instanceFromNib()
+        picker.setPickerOptions(["a", "b", "c", "d", "e", "f", "g", "h", "i"])
+        
+        prebuiltsection.addRow(picker.makeRowFromSelf())
         
         
         let account = JLCSSection(title: "Account")

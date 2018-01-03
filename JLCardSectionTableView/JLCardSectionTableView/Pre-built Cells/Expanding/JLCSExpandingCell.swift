@@ -16,9 +16,11 @@ public class JLCSExpandingCell: JLCSPrebuiltCellView {
     @IBOutlet var minimisedView:UIView!
     @IBOutlet var expandedView:UIView!
     @IBOutlet var minimisedHeightConstraint:NSLayoutConstraint!
+    @IBOutlet var expandedHeightConstraint:NSLayoutConstraint!
     
     public override func awakeFromNib() {
         minimisedHeightConstraint.constant = requiredHeight
+        expandedHeightConstraint.constant = alternateHeight - requiredHeight
         updateConstraintsIfNeeded()
     }
 }
