@@ -37,6 +37,7 @@ public class JLCardSectionTableView: UITableView, UITableViewDelegate, UITableVi
         }
     }
     
+    // MARK: Show and Hide Subsections
     private func goBackFromSubsectionFor(row:JLCSRow, indexPath:IndexPath) {
         if let parent_section = row.parentsection {
             data.remove(at: indexPath.section)
