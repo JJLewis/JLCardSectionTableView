@@ -30,11 +30,11 @@ class ViewController: UIViewController {
         picker.setPickerOptions(["a", "b", "c", "d", "e", "f", "g", "h", "i"])
         prebuiltsection.addRow(picker.makeRowFromSelf())
         let multibutton = JLCSMultiButtonCell.instanceFromNib()
-        multibutton.addButtonWithTitle("Cancel")
-        multibutton.addButtonWithTitle("Save")
-        multibutton.buttonPressedCallback = {
-            button, index in
-            print("Button pressed was number \(index) with title \(button.title(for: .normal)!)")
+        multibutton.addButtonWithTitle("Cancel") { (sender) in
+            print("Cancel Pressed")
+        }
+        multibutton.addButtonWithTitle("Save") { (sender) in
+            print("Save Pressed")
         }
         prebuiltsection.addRow(multibutton.makeRowFromSelf())
         

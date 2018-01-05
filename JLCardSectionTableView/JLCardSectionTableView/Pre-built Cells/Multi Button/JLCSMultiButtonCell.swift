@@ -10,28 +10,25 @@ import UIKit
 
 public class JLCSMultiButtonCell: JLCSPrebuiltCellView {
     
-    public var buttonPressedCallback:(UIButton, Int)->() = {_,_ in }
+    public typealias ButtonCallback = (UIButton)->()
+    private var buttonsToActions:[UIButton:ButtonCallback] = [:]
     
     @IBOutlet var horizontalStackview: UIStackView!
     
-    public func addButtonWithTitle(_ title:String) {
+    public func addButtonWithTitle(_ title:String, callback: @escaping ButtonCallback) {
         let button = UIButton(type: .roundedRect)
         button.setTitle(title, for: .normal)
-        addButton(button)
+        addButton(button, callback: callback)
     }
     
-    public func addButton(_ button:UIButton) {
+    public func addButton(_ button:UIButton, callback: @escaping ButtonCallback) {
         button.addTarget(self, action: #selector(JLCSMultiButtonCell.buttonPressed(_:)), for: .touchUpInside)
         horizontalStackview.addArrangedSubview(button)
+        buttonsToActions[button] = callback
     }
     
     @objc func buttonPressed(_ sender:UIButton) {
-        for i in 0..<horizontalStackview.arrangedSubviews.count {
-            if sender == horizontalStackview.arrangedSubviews[i] {
-                buttonPressedCallback(sender, i)
-                break
-            }
-        }
+        buttonsToActions[sender]!(sender)
     }
     
     public override class func instanceFromNib() -> JLCSMultiButtonCell {
