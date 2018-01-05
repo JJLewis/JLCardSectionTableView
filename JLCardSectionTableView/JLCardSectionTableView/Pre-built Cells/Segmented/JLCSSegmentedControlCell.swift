@@ -14,6 +14,13 @@ public class JLCSSegmentedControlCell: JLCSPrebuiltCellView {
     
     @IBOutlet public var segmentedControl: UISegmentedControl!
     
+    public func setSegments(_ options:[String]) {
+        segmentedControl.removeAllSegments()
+        for i in 0..<options.count {
+            segmentedControl.insertSegment(withTitle: options[i], at: i, animated: true)
+        }
+    }
+    
     @IBAction func segmentedSelectionChanged(_ sender: UISegmentedControl) {
         selectionChangedCallback(sender)
     }

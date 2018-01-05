@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1763DEF31FF1DAE200CE97FE /* JLCSTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1763DEF21FF1DAE200CE97FE /* JLCSTableViewCell.swift */; };
 		1763DEF51FF1DBB000CE97FE /* JLCardSectionClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1763DEF41FF1DBB000CE97FE /* JLCardSectionClasses.swift */; };
+		AA00CB0A1FFF0E8B00C58320 /* JLCSMultiButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00CB091FFF0E8B00C58320 /* JLCSMultiButtonCell.swift */; };
+		AA00CB0C1FFF0E9100C58320 /* JLCSMultiButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA00CB0B1FFF0E9100C58320 /* JLCSMultiButtonCell.xib */; };
 		AA1CA07B1FF5CA4000B574C2 /* JLCSConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1CA07A1FF5CA4000B574C2 /* JLCSConstants.swift */; };
 		AA1CA0801FF5E81C00B574C2 /* JLCSDefaultContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA1CA07F1FF5E81C00B574C2 /* JLCSDefaultContent.xib */; };
 		AA1CA0821FF60A1500B574C2 /* JLCSExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1CA0811FF60A1500B574C2 /* JLCSExtensions.swift */; };
@@ -53,6 +55,8 @@
 /* Begin PBXFileReference section */
 		1763DEF21FF1DAE200CE97FE /* JLCSTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLCSTableViewCell.swift; sourceTree = "<group>"; };
 		1763DEF41FF1DBB000CE97FE /* JLCardSectionClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLCardSectionClasses.swift; sourceTree = "<group>"; };
+		AA00CB091FFF0E8B00C58320 /* JLCSMultiButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLCSMultiButtonCell.swift; sourceTree = "<group>"; };
+		AA00CB0B1FFF0E9100C58320 /* JLCSMultiButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JLCSMultiButtonCell.xib; sourceTree = "<group>"; };
 		AA1CA07A1FF5CA4000B574C2 /* JLCSConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLCSConstants.swift; sourceTree = "<group>"; };
 		AA1CA07F1FF5E81C00B574C2 /* JLCSDefaultContent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JLCSDefaultContent.xib; sourceTree = "<group>"; };
 		AA1CA0811FF60A1500B574C2 /* JLCSExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLCSExtensions.swift; sourceTree = "<group>"; };
@@ -106,6 +110,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA00CB081FFF0E7200C58320 /* Multi Button */ = {
+			isa = PBXGroup;
+			children = (
+				AA00CB091FFF0E8B00C58320 /* JLCSMultiButtonCell.swift */,
+				AA00CB0B1FFF0E9100C58320 /* JLCSMultiButtonCell.xib */,
+			);
+			path = "Multi Button";
+			sourceTree = "<group>";
+		};
 		AA1CA0831FF60B9A00B574C2 /* Default */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				AA7BA3981FFCED2200A2F658 /* JLCSPrebuiltCellView.swift */,
+				AA00CB081FFF0E7200C58320 /* Multi Button */,
 				AA7BA3A11FFD084800A2F658 /* Expanding */,
 				AA7BA39A1FFD013400A2F658 /* Picker */,
 				AAF609E11FFCBC9A0090DBC5 /* Segmented */,
@@ -385,6 +399,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAF609E01FFCB9680090DBC5 /* JLCSSliderCell.xib in Resources */,
+				AA00CB0C1FFF0E9100C58320 /* JLCSMultiButtonCell.xib in Resources */,
 				AAF12A2A1FF0663D007A3799 /* JLRoundedShadowView.xib in Resources */,
 				AAB637821FFC8ED8008B0C2E /* JLCSSwitchCell.xib in Resources */,
 				AAF12A201FF0652E007A3799 /* JLCSBottomTableViewCell.xib in Resources */,
@@ -421,6 +436,7 @@
 				AAF609E31FFCBE3B0090DBC5 /* JLCSSegmentedControlCell.swift in Sources */,
 				AA1CA0821FF60A1500B574C2 /* JLCSExtensions.swift in Sources */,
 				AAF12A271FF0662B007A3799 /* JLRoundedShadowView.swift in Sources */,
+				AA00CB0A1FFF0E8B00C58320 /* JLCSMultiButtonCell.swift in Sources */,
 				AAF12A0F1FEFE865007A3799 /* JLCardSectionTableView.swift in Sources */,
 				AA7BA3A31FFD084800A2F658 /* JLCSExpandingCell.swift in Sources */,
 				AAF609DE1FFCB9600090DBC5 /* JLCSSliderCell.swift in Sources */,

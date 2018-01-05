@@ -28,9 +28,15 @@ class ViewController: UIViewController {
         prebuiltsection.addRow(segmented)
         let picker = JLCSPickerCell.instanceFromNib()
         picker.setPickerOptions(["a", "b", "c", "d", "e", "f", "g", "h", "i"])
-        
         prebuiltsection.addRow(picker.makeRowFromSelf())
-        
+        let multibutton = JLCSMultiButtonCell.instanceFromNib()
+        multibutton.addButtonWithTitle("Cancel")
+        multibutton.addButtonWithTitle("Save")
+        multibutton.buttonPressedCallback = {
+            button, index in
+            print("Button pressed was number \(index) with title \(button.title(for: .normal)!)")
+        }
+        prebuiltsection.addRow(multibutton.makeRowFromSelf())
         
         let account = JLCSSection(title: "Account")
         let updateDetails = JLCSRow(title: "Update Details", decorator:UIImage.JLCSRowDecoratorRightArrow)
