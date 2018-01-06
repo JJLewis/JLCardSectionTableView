@@ -87,6 +87,8 @@ public class JLCSRow {
     let view:UIView
     public var height:CGFloat = 50
     public var selectedCallback:()->() = {}
+    public var showSubsectionAction:()->() = {}
+    public var showParentsectionAction:()->() = {}
     internal var subsection:JLCSSubSection?
     internal var parentsection:JLCSSection?
     
