@@ -62,14 +62,14 @@ public class JLCSSubSection:JLCSSection {
     
     // MARK: Initialisers
     public convenience init(title _title: String) {
-        self.init(title: _title, backButtonWithTitle: "Back")
+        self.init(title: _title, backButton: nil)
     }
     
     public convenience init(title _title: String, backButtonWithTitle title:String) {
         self.init(title: _title, rows: [], backButtonWithTitle: title)
     }
     
-    public convenience init(title _title: String, backButton aBackButton:JLCSRow) {
+    public convenience init(title _title: String, backButton aBackButton:JLCSRow?) {
         self.init(title: _title, rows: [], backButton: aBackButton)
     }
     
@@ -77,9 +77,9 @@ public class JLCSSubSection:JLCSSection {
         self.init(title: _title, rows: _rows, backButton: JLCSRow(title: title))
     }
     
-    public init(title _title: String, rows _rows: [JLCSRow], backButton aBackButton:JLCSRow) {
+    public init(title _title: String, rows _rows: [JLCSRow], backButton aBackButton:JLCSRow?) {
         super.init(title: _title, rows: _rows)
-        backButtonRow = aBackButton
+        _backButtonRow = aBackButton
     }
 }
 
