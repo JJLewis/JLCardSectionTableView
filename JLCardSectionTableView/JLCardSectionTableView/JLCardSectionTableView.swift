@@ -49,7 +49,7 @@ public class JLCardSectionTableView: UITableView, UITableViewDelegate, UITableVi
     
     private func showSubsectionFor(row:JLCSRow, indexPath:IndexPath) {
         if let new_section = row.subsection {
-            let back = new_section.backButton
+            let back = new_section.backButtonRow
             back.parentsection = data[indexPath.section]
             back.showParentsectionAction = {
                 self.goBackFromSubsectionFor(row: back, indexPath: indexPath)

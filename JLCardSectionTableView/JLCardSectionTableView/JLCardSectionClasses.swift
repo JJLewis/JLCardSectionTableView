@@ -27,18 +27,18 @@ private class JLCSRowDefault {
 }
 
 public class JLCSSubSection:JLCSSection {
-    private var _backButton:JLCSRow?
-    internal var backButton:JLCSRow {
+    private var _backButtonRow:JLCSRow?
+    internal var backButtonRow:JLCSRow {
         get {
-            if let b = _backButton {
+            if let b = _backButtonRow {
                 return b
             } else {
-                _backButton = JLCSRow(title: "Back")
-                return _backButton!
+                _backButtonRow = JLCSRow(title: "Back")
+                return _backButtonRow!
             }
         }
         set {
-            _backButton = newValue
+            _backButtonRow = newValue
         }
     }
     
@@ -50,14 +50,14 @@ public class JLCSSubSection:JLCSSection {
     
     override func getRow(_ index: Int) -> JLCSRow {
         if index == numberOfRows - 1 {
-            return backButton
+            return backButtonRow
         } else {
             return super.getRow(index)
         }
     }
     
     public func setBackButtonWithTitle(title:String) {
-        backButton = JLCSRow(title: title)
+        backButtonRow = JLCSRow(title: title)
     }
     
     // MARK: Initialisers
@@ -79,7 +79,7 @@ public class JLCSSubSection:JLCSSection {
     
     public init(title _title: String, rows _rows: [JLCSRow], backButton aBackButton:JLCSRow) {
         super.init(title: _title, rows: _rows)
-        backButton = aBackButton
+        backButtonRow = aBackButton
     }
 }
 
