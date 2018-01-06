@@ -44,12 +44,18 @@ class ViewController: UIViewController {
             print("Hello world")
         }
         let buyCredits = JLCSRow(title: "Buy Credits")
+        account.addRow(updateDetails)
+        account.addRow(buyCredits)
         
         let creditsSection = JLCSSubSection(title: "Buy Credits")
         let tenCredits = JLCSRow(title: "Buy 10 Credits")
         let twentyCredits = JLCSRow(title: "Buy 20 Credits")
         let thirtyCredits = JLCSRow(title: "Buy 30 Credits")
-        
+        creditsSection.addRow(tenCredits)
+        creditsSection.addRow(twentyCredits)
+        creditsSection.addRow(thirtyCredits)
+        buyCredits.setSubsection(section: creditsSection)
+
         let paywithSection = JLCSSubSection(title: "Pay With", backButtonWithTitle: "Cancel")
         let master = JLCSRow(title: "Mastercard")
         let visa = JLCSRow(title: "Visa")
@@ -58,15 +64,6 @@ class ViewController: UIViewController {
         tenCredits.setSubsection(section: paywithSection)
         twentyCredits.setSubsection(section: paywithSection)
         thirtyCredits.setSubsection(section: paywithSection)
-        
-        creditsSection.addRow(tenCredits)
-        creditsSection.addRow(twentyCredits)
-        creditsSection.addRow(thirtyCredits)
-        
-        buyCredits.setSubsection(section: creditsSection)
-        
-        account.addRow(updateDetails)
-        account.addRow(buyCredits)
         
         let settings = JLCSSection(title: "Settings")
         let pushView = Bundle.main.loadNibNamed("CustomCellView", owner: self, options: nil)!.first as! CustomCellView
