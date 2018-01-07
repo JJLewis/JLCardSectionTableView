@@ -51,12 +51,8 @@ public class JLCSSubSection:JLCSSection {
     }
     
     override func getRow(_ index: Int) -> JLCSRow {
-        if automadeBackRow {
-            if index == numberOfRows - 1 {
-                return backButtonRow
-            } else {
-                return super.getRow(index)
-            }
+        if index == numberOfRows - (automadeBackRow ? 1:0) {
+            return backButtonRow
         } else {
             return super.getRow(index)
         }
