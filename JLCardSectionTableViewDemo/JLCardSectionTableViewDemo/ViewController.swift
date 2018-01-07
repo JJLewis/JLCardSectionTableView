@@ -54,6 +54,15 @@ class ViewController: UIViewController {
         creditsSection.addRow(tenCredits)
         creditsSection.addRow(twentyCredits)
         creditsSection.addRow(thirtyCredits)
+        let dbutton = JLCSMultiButtonCell.instanceFromNib()
+        dbutton.addButtonWithTitle("Back") { (sender) in
+            dbutton.row.showParentsectionAction()
+        }
+        dbutton.addButtonWithTitle("Next") { (sender) in
+            dbutton.row.showSubsectionAction()
+        }
+        creditsSection.addRow(dbutton.row)
+        creditsSection.backButtonRow = dbutton.row
         buyCredits.setSubsection(section: creditsSection)
 
         let paywithSection = JLCSSubSection(title: "Pay With", backButtonWithTitle: "Cancel")
@@ -64,7 +73,8 @@ class ViewController: UIViewController {
         tenCredits.setSubsection(section: paywithSection)
         twentyCredits.setSubsection(section: paywithSection)
         thirtyCredits.setSubsection(section: paywithSection)
-        
+        dbutton.row.setSubsection(section: paywithSection)
+
         let settings = JLCSSection(title: "Settings")
         let pushView = Bundle.main.loadNibNamed("CustomCellView", owner: self, options: nil)!.first as! CustomCellView
         pushView.titleLabel.text = "Push Notifications: Try toggle the switch"

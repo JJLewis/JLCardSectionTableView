@@ -28,7 +28,7 @@ private class JLCSRowDefault {
 
 public class JLCSSubSection:JLCSSection {
     private var _backButtonRow:JLCSRow?
-    internal var backButtonRow:JLCSRow {
+    public var backButtonRow:JLCSRow {
         get {
             if let b = _backButtonRow {
                 return b
