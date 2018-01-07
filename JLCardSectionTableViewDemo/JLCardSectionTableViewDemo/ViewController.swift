@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         prebuiltsection.addRow(segmented)
         let picker = JLCSPickerCell.instanceFromNib()
         picker.setPickerOptions(["a", "b", "c", "d", "e", "f", "g", "h", "i"])
-        prebuiltsection.addRow(picker.makeRowFromSelf())
+        prebuiltsection.addRow(picker.row)
         let multibutton = JLCSMultiButtonCell.instanceFromNib()
         multibutton.addButtonWithTitle("Cancel") { (sender) in
             print("Cancel Pressed")
@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         multibutton.addButtonWithTitle("Save") { (sender) in
             print("Save Pressed")
         }
-        prebuiltsection.addRow(multibutton.makeRowFromSelf())
+        prebuiltsection.addRow(multibutton.row)
         
         let account = JLCSSection(title: "Account")
         let updateDetails = JLCSRow(title: "Update Details", decorator:UIImage.JLCSRowDecoratorRightArrow)
@@ -44,12 +44,27 @@ class ViewController: UIViewController {
             print("Hello world")
         }
         let buyCredits = JLCSRow(title: "Buy Credits")
+        account.addRow(updateDetails)
+        account.addRow(buyCredits)
         
         let creditsSection = JLCSSubSection(title: "Buy Credits")
         let tenCredits = JLCSRow(title: "Buy 10 Credits")
         let twentyCredits = JLCSRow(title: "Buy 20 Credits")
         let thirtyCredits = JLCSRow(title: "Buy 30 Credits")
-        
+        creditsSection.addRow(tenCredits)
+        creditsSection.addRow(twentyCredits)
+        creditsSection.addRow(thirtyCredits)
+        let dbutton = JLCSMultiButtonCell.instanceFromNib()
+        dbutton.addButtonWithTitle("Back") { (sender) in
+            dbutton.row.showParentsectionAction()
+        }
+        dbutton.addButtonWithTitle("Next") { (sender) in
+            dbutton.row.showSubsectionAction()
+        }
+        creditsSection.addRow(dbutton.row)
+        creditsSection.backButtonRow = dbutton.row
+        buyCredits.setSubsection(section: creditsSection)
+
         let paywithSection = JLCSSubSection(title: "Pay With", backButtonWithTitle: "Cancel")
         let master = JLCSRow(title: "Mastercard")
         let visa = JLCSRow(title: "Visa")
@@ -58,16 +73,8 @@ class ViewController: UIViewController {
         tenCredits.setSubsection(section: paywithSection)
         twentyCredits.setSubsection(section: paywithSection)
         thirtyCredits.setSubsection(section: paywithSection)
-        
-        creditsSection.addRow(tenCredits)
-        creditsSection.addRow(twentyCredits)
-        creditsSection.addRow(thirtyCredits)
-        
-        buyCredits.setSubsection(section: creditsSection)
-        
-        account.addRow(updateDetails)
-        account.addRow(buyCredits)
-        
+        dbutton.row.setSubsection(section: paywithSection)
+
         let settings = JLCSSection(title: "Settings")
         let pushView = Bundle.main.loadNibNamed("CustomCellView", owner: self, options: nil)!.first as! CustomCellView
         pushView.titleLabel.text = "Push Notifications: Try toggle the switch"

@@ -49,11 +49,9 @@ public class JLCardSectionTableView: UITableView, UITableViewDelegate, UITableVi
     
     private func showSubsectionFor(row:JLCSRow, indexPath:IndexPath) {
         if let new_section = row.subsection {
-            let back = new_section.backButton
+            let back = new_section.backButtonRow
             back.parentsection = data[indexPath.section]
-            let assignedCallback = back.selectedCallback
-            back.selectedCallback = {
-                assignedCallback()
+            back.showParentsectionAction = {
                 self.goBackFromSubsectionFor(row: back, indexPath: indexPath)
             }
             data.remove(at: indexPath.section)
@@ -110,8 +108,15 @@ public class JLCardSectionTableView: UITableView, UITableViewDelegate, UITableVi
         
         let row = section.getRow(indexPath.row)
         (cell as! JLCSTableViewCell).setContent(view: row.view)
-        (cell as! JLCSTableViewCell).tapAction = {
+        row.showSubsectionAction = {
             self.showSubsectionFor(row: row, indexPath: indexPath)
+        }
+        (cell as! JLCSTableViewCell).tapAction = {
+            if row.subsection != nil {
+                row.showSubsectionAction()
+            } else if row.parentsection != nil {
+                row.showParentsectionAction()
+            }
             row.selectedCallback()
         }
         if let expandingRow = row.view as? JLCSExpandingCell {

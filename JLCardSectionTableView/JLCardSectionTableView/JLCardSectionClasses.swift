@@ -27,49 +27,51 @@ private class JLCSRowDefault {
 }
 
 public class JLCSSubSection:JLCSSection {
-    private var _backButton:JLCSRow?
-    internal var backButton:JLCSRow {
+    private var _backButtonRow:JLCSRow?
+    private var automadeBackRow:Bool = false
+    public var backButtonRow:JLCSRow {
         get {
-            if let b = _backButton {
+            if let b = _backButtonRow {
                 return b
             } else {
-                _backButton = JLCSRow(title: "Back")
-                return _backButton!
+                _backButtonRow = JLCSRow(title: "Back")
+                automadeBackRow = true
+                return _backButtonRow!
             }
         }
         set {
-            _backButton = newValue
+            _backButtonRow = newValue
         }
     }
     
     override public var numberOfRows: Int {
         get {
-            return rows.count + 1
+            return rows.count + (automadeBackRow ? 1:0)
         }
     }
     
     override func getRow(_ index: Int) -> JLCSRow {
-        if index == numberOfRows - 1 {
-            return backButton
+        if index == numberOfRows - (automadeBackRow ? 1:0) {
+            return backButtonRow
         } else {
             return super.getRow(index)
         }
     }
     
     public func setBackButtonWithTitle(title:String) {
-        backButton = JLCSRow(title: title)
+        backButtonRow = JLCSRow(title: title)
     }
     
     // MARK: Initialisers
     public convenience init(title _title: String) {
-        self.init(title: _title, backButtonWithTitle: "Back")
+        self.init(title: _title, backButton: nil)
     }
     
     public convenience init(title _title: String, backButtonWithTitle title:String) {
         self.init(title: _title, rows: [], backButtonWithTitle: title)
     }
     
-    public convenience init(title _title: String, backButton aBackButton:JLCSRow) {
+    public convenience init(title _title: String, backButton aBackButton:JLCSRow?) {
         self.init(title: _title, rows: [], backButton: aBackButton)
     }
     
@@ -77,9 +79,12 @@ public class JLCSSubSection:JLCSSection {
         self.init(title: _title, rows: _rows, backButton: JLCSRow(title: title))
     }
     
-    public init(title _title: String, rows _rows: [JLCSRow], backButton aBackButton:JLCSRow) {
+    public init(title _title: String, rows _rows: [JLCSRow], backButton aBackButton:JLCSRow?) {
         super.init(title: _title, rows: _rows)
-        backButton = aBackButton
+        if let b = aBackButton {
+            _backButtonRow = b
+            automadeBackRow = true
+        }
     }
 }
 
@@ -87,6 +92,8 @@ public class JLCSRow {
     let view:UIView
     public var height:CGFloat = 50
     public var selectedCallback:()->() = {}
+    public var showSubsectionAction:()->() = {}
+    public var showParentsectionAction:()->() = {}
     internal var subsection:JLCSSubSection?
     internal var parentsection:JLCSSection?
     
@@ -127,9 +134,7 @@ public class JLCSSection {
     }
     
     public func addRows(prebuiltCells _rows:[JLCSPrebuiltCellView]) {
-        for row in _rows {
-            rows.append(row.makeRowFromSelf())
-        }
+        addRows(_rows.map { $0.row })
     }
     
     internal func getRow(_ index:Int) -> JLCSRow {
