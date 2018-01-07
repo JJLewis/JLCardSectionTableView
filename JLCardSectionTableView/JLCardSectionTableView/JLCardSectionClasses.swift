@@ -28,12 +28,14 @@ private class JLCSRowDefault {
 
 public class JLCSSubSection:JLCSSection {
     private var _backButtonRow:JLCSRow?
+    private var automadeBackRow:Bool = false
     public var backButtonRow:JLCSRow {
         get {
             if let b = _backButtonRow {
                 return b
             } else {
                 _backButtonRow = JLCSRow(title: "Back")
+                automadeBackRow = true
                 return _backButtonRow!
             }
         }
@@ -44,13 +46,17 @@ public class JLCSSubSection:JLCSSection {
     
     override public var numberOfRows: Int {
         get {
-            return rows.count + 1
+            return rows.count + (automadeBackRow ? 1:0)
         }
     }
     
     override func getRow(_ index: Int) -> JLCSRow {
-        if index == numberOfRows - 1 {
-            return backButtonRow
+        if automadeBackRow {
+            if index == numberOfRows - 1 {
+                return backButtonRow
+            } else {
+                return super.getRow(index)
+            }
         } else {
             return super.getRow(index)
         }
@@ -79,7 +85,10 @@ public class JLCSSubSection:JLCSSection {
     
     public init(title _title: String, rows _rows: [JLCSRow], backButton aBackButton:JLCSRow?) {
         super.init(title: _title, rows: _rows)
-        _backButtonRow = aBackButton
+        if let b = aBackButton {
+            _backButtonRow = b
+            automadeBackRow = true
+        }
     }
 }
 
