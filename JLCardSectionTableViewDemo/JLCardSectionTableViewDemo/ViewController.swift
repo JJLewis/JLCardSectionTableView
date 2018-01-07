@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         prebuiltsection.addRow(segmented)
         let picker = JLCSPickerCell.instanceFromNib()
         picker.setPickerOptions(["a", "b", "c", "d", "e", "f", "g", "h", "i"])
-        prebuiltsection.addRow(picker.makeRowFromSelf())
+        prebuiltsection.addRow(picker.row)
         let multibutton = JLCSMultiButtonCell.instanceFromNib()
         multibutton.addButtonWithTitle("Cancel") { (sender) in
             print("Cancel Pressed")
@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         multibutton.addButtonWithTitle("Save") { (sender) in
             print("Save Pressed")
         }
-        prebuiltsection.addRow(multibutton.makeRowFromSelf())
+        prebuiltsection.addRow(multibutton.row)
         
         let account = JLCSSection(title: "Account")
         let updateDetails = JLCSRow(title: "Update Details", decorator:UIImage.JLCSRowDecoratorRightArrow)

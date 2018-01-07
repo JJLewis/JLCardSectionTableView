@@ -10,11 +10,17 @@ import UIKit
 public class JLCSPrebuiltCellView: UIView {
     
     let requiredHeight:CGFloat = 50
-    
-    public func makeRowFromSelf() -> JLCSRow {
-        let row = JLCSRow(view: self)
-        row.height = requiredHeight
-        return row
+    private var _row:JLCSRow?
+    public var row:JLCSRow {
+        get {
+            if let r = _row {
+                return r
+            } else {
+                _row = JLCSRow(view: self)
+                _row!.height = requiredHeight
+                return _row!
+            }
+        }
     }
     
     public class func instanceFromNib() -> JLCSPrebuiltCellView {
