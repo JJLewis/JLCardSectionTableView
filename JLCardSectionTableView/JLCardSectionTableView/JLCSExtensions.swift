@@ -18,4 +18,7 @@ internal extension UIView {
 
 public extension UIImage {
     static let JLCSRowDecoratorRightArrow = UIImage(named: "right_arrow", in: jlcsBundle, compatibleWith: nil)!
+    static let JLCSRowDecoratorUpArrow = UIImage(named: "up_arrow", in: jlcsBundle, compatibleWith: nil)!
+    static let JLCSRowDecoratorDownArrow = UIImage(named: "down_arrow", in: jlcsBundle, compatibleWith: nil)!
+    static let JLCSRowDecoratorVerticalExpand = UIImage(named: "vertical_expand", in: jlcsBundle, compatibleWith: nil)!
 }
