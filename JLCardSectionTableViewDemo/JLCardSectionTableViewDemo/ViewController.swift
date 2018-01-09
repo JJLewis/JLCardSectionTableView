@@ -37,6 +37,10 @@ class ViewController: UIViewController {
             print("Save Pressed")
         }
         prebuiltsection.addRow(multibutton.row)
+        let web = JLCSWebCell.instanceFromNib()
+        web.titleLabel.text = "goonncode.com"
+        web.showWebsite(withURL: URL(string: "http://goonncode.com")!)
+        prebuiltsection.addRow(web.row)
         
         let account = JLCSSection(title: "Account")
         let updateDetails = JLCSRow(title: "Update Details", decorator:UIImage.JLCSRowDecoratorRightArrow)

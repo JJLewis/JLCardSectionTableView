@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="uKA-BL-edw" customClass="JLCSWebCell" customModule="JLCardSectionTableView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Szy-qK-qQz">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="rGh-RW-Rcb">
+                            <rect key="frame" x="10" y="0.0" width="355" height="50"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHa-yt-f2H">
+                                    <rect key="frame" x="0.0" y="0.0" width="42" height="50"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c3t-D2-5rC">
+                                    <rect key="frame" x="304" y="0.0" width="51" height="50"/>
+                                    <state key="normal" title="Expand"/>
+                                    <connections>
+                                        <action selector="buttonPressed:" destination="uKA-BL-edw" eventType="touchUpInside" id="BiU-1L-x6S"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="0m4-g2-X8r"/>
+                        <constraint firstItem="rGh-RW-Rcb" firstAttribute="leading" secondItem="Szy-qK-qQz" secondAttribute="leading" constant="10" id="5Ys-K6-UoN"/>
+                        <constraint firstItem="rGh-RW-Rcb" firstAttribute="top" secondItem="Szy-qK-qQz" secondAttribute="top" id="9C0-5G-mJ3"/>
+                        <constraint firstAttribute="bottom" secondItem="rGh-RW-Rcb" secondAttribute="bottom" id="S5i-wr-SW0"/>
+                        <constraint firstAttribute="trailing" secondItem="rGh-RW-Rcb" secondAttribute="trailing" constant="10" id="Xl9-Sa-WA5"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BjP-bW-S86">
+                    <rect key="frame" x="0.0" y="50" width="375" height="200"/>
+                    <subviews>
+                        <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SyS-uu-BJo">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                            <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <wkWebViewConfiguration key="configuration">
+                                <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                <wkPreferences key="preferences"/>
+                            </wkWebViewConfiguration>
+                        </wkWebView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="SyS-uu-BJo" secondAttribute="bottom" id="789-kR-4tS"/>
+                        <constraint firstAttribute="height" constant="200" id="81l-PR-L0S"/>
+                        <constraint firstItem="SyS-uu-BJo" firstAttribute="leading" secondItem="BjP-bW-S86" secondAttribute="leading" id="mNv-Ob-IU5"/>
+                        <constraint firstAttribute="trailing" secondItem="SyS-uu-BJo" secondAttribute="trailing" id="tV1-2W-eSq"/>
+                        <constraint firstItem="SyS-uu-BJo" firstAttribute="top" secondItem="BjP-bW-S86" secondAttribute="top" id="vfQ-gD-CrI"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Szy-qK-qQz" firstAttribute="bottom" secondItem="BjP-bW-S86" secondAttribute="top" id="3qx-AB-0IO"/>
+                <constraint firstItem="Szy-qK-qQz" firstAttribute="top" secondItem="uKA-BL-edw" secondAttribute="top" id="ET0-DI-JfO"/>
+                <constraint firstItem="UiY-Am-45w" firstAttribute="trailing" secondItem="Szy-qK-qQz" secondAttribute="trailing" id="Epl-mT-ddh"/>
+                <constraint firstItem="UiY-Am-45w" firstAttribute="trailing" secondItem="BjP-bW-S86" secondAttribute="trailing" id="G9T-o1-gDK"/>
+                <constraint firstItem="BjP-bW-S86" firstAttribute="leading" secondItem="UiY-Am-45w" secondAttribute="leading" id="JLX-Zq-fG6"/>
+                <constraint firstItem="BjP-bW-S86" firstAttribute="bottom" secondItem="UiY-Am-45w" secondAttribute="bottom" priority="750" id="f7D-Cq-6lT"/>
+                <constraint firstItem="Szy-qK-qQz" firstAttribute="leading" secondItem="uKA-BL-edw" secondAttribute="leading" id="lkG-sI-lg4"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="UiY-Am-45w"/>
+            <connections>
+                <outlet property="button" destination="c3t-D2-5rC" id="SPT-UG-saY"/>
+                <outlet property="expandedHeightConstraint" destination="81l-PR-L0S" id="MX4-g8-5Jg"/>
+                <outlet property="expandedView" destination="BjP-bW-S86" id="Avr-Us-6v5"/>
+                <outlet property="minimisedHeightConstraint" destination="0m4-g2-X8r" id="jc0-PZ-loA"/>
+                <outlet property="minimisedView" destination="Szy-qK-qQz" id="JIl-dU-kWC"/>
+                <outlet property="titleLabel" destination="zHa-yt-f2H" id="F8r-1C-Moq"/>
+                <outlet property="webview" destination="SyS-uu-BJo" id="iXp-ty-i7l"/>
+            </connections>
+            <point key="canvasLocation" x="38" y="50"/>
+        </view>
+    </objects>
+</document>
