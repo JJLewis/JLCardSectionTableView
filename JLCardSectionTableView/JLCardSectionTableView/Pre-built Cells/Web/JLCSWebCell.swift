@@ -20,7 +20,8 @@ public class JLCSWebCell: JLCSExpandingCell {
     }
     
     @IBAction func buttonPressed(_ sender:UIButton) {
-        toggleExpandCallback(self.alternateHeight)
+        toggleExpand()
+        sender.setImage(isExpanded ? UIImage.JLCSRowDecoratorUpArrow:UIImage.JLCSRowDecoratorDownArrow, for: .normal)
     }
     
     public override class func instanceFromNib() -> JLCSWebCell {

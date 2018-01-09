@@ -19,7 +19,7 @@ public class JLCSPickerCell: JLCSExpandingCell, UIPickerViewDataSource, UIPicker
     @IBOutlet public var picker: UIPickerView!
     
     @IBAction func buttonPressed(_ sender:UIButton) {
-        toggleExpandCallback(self.alternateHeight)
+        toggleExpand()
     }
     
     public func setPickerOptions(_ options:[String]) {
