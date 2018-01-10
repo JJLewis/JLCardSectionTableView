@@ -38,11 +38,11 @@ class ViewController: UIViewController {
         }
         prebuiltsection.addRow(multibutton.row)
         let web = JLCSWebCell.instanceFromNib()
-        web.titleLabel.text = "goonncode.com"
-        web.showWebsite(withURL: URL(string: "http://goonncode.com")!)
+        web.titleLabel.text = "jjlewis"
+        web.showWebsite(withURL: URL(string: "https://github.com/jjlewis")!)
         prebuiltsection.addRow(web.row)
         
-        let websection = JLCSWebSection(title: "goonncode section", url: URL(string: "http://goonncode.com")!)
+        let websection = JLCSWebSection(title: "jjlewis section", url: URL(string: "https://github.com/jjlewis")!)
         
         let account = JLCSSection(title: "Account")
         let updateDetails = JLCSRow(title: "Update Details", decorator:UIImage.JLCSRowDecoratorRightArrow)

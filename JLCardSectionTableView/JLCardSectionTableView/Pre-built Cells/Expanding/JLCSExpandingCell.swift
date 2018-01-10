@@ -25,9 +25,14 @@ public class JLCSExpandingCell: JLCSPrebuiltCellView {
         isExpanded = !isExpanded
     }
     
-    public override func awakeFromNib() {
+    internal func setExpandingConstraints() {
         minimisedHeightConstraint.constant = requiredHeight
         expandedHeightConstraint.constant = alternateHeight - requiredHeight
         updateConstraintsIfNeeded()
+    }
+    
+    public override func awakeFromNib() {
+        super.awakeFromNib()
+        setExpandingConstraints()
     }
 }

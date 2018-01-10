@@ -29,8 +29,18 @@ public class JLCSWebCell: JLCSExpandingCell {
     }
     
     public override func awakeFromNib() {
-        self.alternateHeight = 250
         super.awakeFromNib()
         webview.allowsBackForwardNavigationGestures = false
+        
+        // Set slight shadow
+        minimisedView.layer.shadowColor = UIColor.black.cgColor
+        minimisedView.layer.shadowOffset = CGSize(width: 0, height: 1.0)
+        minimisedView.layer.shadowRadius = 2
+        minimisedView.layer.shadowOpacity = 0.25
+    }
+    
+    public required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.alternateHeight = 250
     }
 }

@@ -27,15 +27,23 @@ class JLCSWebSectionCell: JLCSWebCell {
         toggleExpand()
     }
     
-    public override func awakeFromNib() {
-        shouldPushToTopOnExpand = true
-        requiredHeight = 250
-        expandedSectionHeight = UIScreen.main.bounds.height
+    override func setExpandingConstraints() {
         minimisedHeightConstraint.constant = headingHeight
         expandedHeightConstraint.constant = alternateHeight - headingHeight
         updateConstraintsIfNeeded()
+    }
+    
+    public override func awakeFromNib() {
+        super.awakeFromNib()
         webview.allowsBackForwardNavigationGestures = false
         button.setImage(UIImage.JLCSRowDecoratorVerticalExpand, for: .normal)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        shouldPushToTopOnExpand = true
+        requiredHeight = 250
+        expandedSectionHeight = UIScreen.main.bounds.height
     }
     
     public override class func instanceFromNib() -> JLCSWebSectionCell {
