@@ -31,7 +31,7 @@ Support for sub-sections to be more organised.
 Uses auto-layout.
                    DESC
 
-  s.homepage     = "http://goonncode.com"
+  s.homepage     = "https://github.com/jjlewis/JLCardSectionTableView"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
