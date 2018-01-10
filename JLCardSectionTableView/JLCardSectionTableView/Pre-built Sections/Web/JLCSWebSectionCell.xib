@@ -72,7 +72,7 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="200" id="4pi-10-dvA"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="4pi-10-dvA"/>
                         <constraint firstItem="gg4-BK-jRg" firstAttribute="top" secondItem="gvO-X4-lHl" secondAttribute="top" id="ROD-nG-Mem"/>
                         <constraint firstAttribute="bottom" secondItem="gg4-BK-jRg" secondAttribute="bottom" id="af0-QA-WrH"/>
                         <constraint firstItem="gg4-BK-jRg" firstAttribute="leading" secondItem="gvO-X4-lHl" secondAttribute="leading" id="eRS-as-e0Y"/>
