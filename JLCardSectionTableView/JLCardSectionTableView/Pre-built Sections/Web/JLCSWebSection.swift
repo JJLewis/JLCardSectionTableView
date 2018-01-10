@@ -41,6 +41,7 @@ public class JLCSWebSection: JLCSSection {
     public init(title _title:String, url:URL) {
         webcell.backButton.removeFromSuperview()
         webcell.showWebsite(withURL: url)
+        webcell.titleLabel.text = _title
         super.init(title: _title, rows: [webcell.row])
     }
 }
@@ -58,6 +59,7 @@ public class JLCSWebSubSection: JLCSSubSection {
     
     public init(title _title:String, url:URL) {
         webcell.showWebsite(withURL: url)
+        webcell.titleLabel.text = _title
         super.init(title: _title, rows: [webcell.row], backButton: nil)
         backButtonRow = webcell.row
         webcell.backButton.addTarget(self, action: #selector(JLCSWebSubSection.backButtonPressed(_:)), for: .touchUpInside)
