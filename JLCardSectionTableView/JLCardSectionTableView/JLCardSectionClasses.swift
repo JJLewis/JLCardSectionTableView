@@ -63,6 +63,10 @@ public class JLCSSubSection:JLCSSection {
     }
     
     // MARK: Initialisers
+    public convenience init(section:JLCSSection) {
+        self.init(title: section.title, rows: section.rows, backButton: nil)
+    }
+    
     public convenience init(title _title: String) {
         self.init(title: _title, backButton: nil)
     }
