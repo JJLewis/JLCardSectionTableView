@@ -17,8 +17,9 @@ class JLCSWebSectionCell: JLCSWebCell {
     
     public override func awakeFromNib() {
         let headingHeight:CGFloat = 50
+        shouldPushToTopOnExpand = true
         self.requiredHeight = 250
-        self.alternateHeight = UIScreen.main.bounds.height - headingHeight
+        self.alternateHeight = UIScreen.main.bounds.height - (headingHeight + 40 /*heading size*/)
         minimisedHeightConstraint.constant = headingHeight
         expandedHeightConstraint.constant = alternateHeight - headingHeight
         updateConstraintsIfNeeded()

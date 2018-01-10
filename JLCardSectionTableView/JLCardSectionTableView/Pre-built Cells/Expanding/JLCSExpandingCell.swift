@@ -11,6 +11,7 @@ import UIKit
 public class JLCSExpandingCell: JLCSPrebuiltCellView {
 
     public var alternateHeight:CGFloat = 250
+    public var shouldPushToTopOnExpand:Bool = false
     internal var toggleExpandCallback:(CGFloat)->() = {_ in }
     internal var isExpanded:Bool = false
     

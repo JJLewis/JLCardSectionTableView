@@ -123,6 +123,9 @@ public class JLCardSectionTableView: UITableView, UITableViewDelegate, UITableVi
             expandingRow.toggleExpandCallback = {
                 newHeight in
                 self.beginUpdates()
+                if expandingRow.shouldPushToTopOnExpand && !expandingRow.isExpanded {
+                    self.scrollToRow(at: indexPath, at: .top, animated: true)
+                }
                 expandingRow.alternateHeight = row.height
                 row.height = newHeight
                 self.endUpdates()
