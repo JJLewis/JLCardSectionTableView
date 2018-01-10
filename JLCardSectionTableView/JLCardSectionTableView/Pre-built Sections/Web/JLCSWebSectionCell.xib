@@ -34,7 +34,7 @@
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="DX4-2C-BOJ" secondAttribute="height" multiplier="1:1" id="UrD-tB-6jt"/>
                                     </constraints>
-                                    <state key="normal" image="down_arrow"/>
+                                    <state key="normal" image="vertical_expand"/>
                                     <connections>
                                         <action selector="buttonPressed:" destination="KVZ-nS-a4E" eventType="touchUpInside" id="cEN-xP-h4g"/>
                                     </connections>
@@ -98,6 +98,6 @@
         </view>
     </objects>
     <resources>
-        <image name="down_arrow" width="25" height="25"/>
+        <image name="vertical_expand" width="25" height="25"/>
     </resources>
 </document>
