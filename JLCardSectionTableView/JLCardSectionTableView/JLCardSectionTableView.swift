@@ -141,6 +141,7 @@ public class JLCardSectionTableView: UITableView, UITableViewDelegate, UITableVi
         
         separatorStyle = .none
         allowsSelection = false
+        autoresizingMask = UIViewAutoresizing.flexibleHeight
         
         register(UINib(nibName: "JLCSTopTableViewCell", bundle: jlcsBundle), forCellReuseIdentifier: "JLCSTopCell")
         register(UINib(nibName: "JLCSMidTableViewCell", bundle: jlcsBundle), forCellReuseIdentifier: "JLCSMiddleCell")
