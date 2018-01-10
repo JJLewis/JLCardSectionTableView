@@ -12,16 +12,25 @@ import WebKit
 class JLCSWebSectionCell: JLCSWebCell {
     
     @IBOutlet internal var backButton: UIButton!
+    private let sectionHeadingHeight:CGFloat = 40
+    private let headingHeight:CGFloat = 50
+    internal var expandedSectionHeight:CGFloat {
+        get {
+            return alternateHeight + headingHeight + sectionHeadingHeight
+        }
+        set {
+            alternateHeight = newValue - (headingHeight + sectionHeadingHeight)
+        }
+    }
     
     @IBAction override func buttonPressed(_ sender:UIButton) {
         toggleExpand()
     }
     
     public override func awakeFromNib() {
-        let headingHeight:CGFloat = 50
         shouldPushToTopOnExpand = true
-        self.requiredHeight = 250
-        self.alternateHeight = UIScreen.main.bounds.height - (headingHeight + 40 /*heading size*/)
+        requiredHeight = 250
+        expandedSectionHeight = UIScreen.main.bounds.height
         minimisedHeightConstraint.constant = headingHeight
         expandedHeightConstraint.constant = alternateHeight - headingHeight
         updateConstraintsIfNeeded()
@@ -38,10 +47,17 @@ public class JLCSWebSection: JLCSSection {
     
     let webcell:JLCSWebSectionCell = JLCSWebSectionCell.instanceFromNib()
     
-    public init(title _title:String, url:URL) {
+    public convenience init(title _title:String, url:URL) {
+        self.init(title: _title, expandedHeight: nil, url: url)
+    }
+    
+    public init(title _title:String, expandedHeight:CGFloat?, url:URL) {
         webcell.backButton.removeFromSuperview()
         webcell.showWebsite(withURL: url)
         webcell.titleLabel.text = _title
+        if let e = expandedHeight {
+            webcell.expandedSectionHeight = e
+        }
         super.init(title: _title, rows: [webcell.row])
     }
 }
@@ -57,9 +73,16 @@ public class JLCSWebSubSection: JLCSSubSection {
         webcell.row.showParentsectionAction()
     }
     
-    public init(title _title:String, url:URL) {
+    public convenience init(title _title:String, url:URL) {
+        self.init(title: _title, expandedHeight: nil, url: url)
+    }
+    
+    public init(title _title:String, expandedHeight:CGFloat?, url:URL) {
         webcell.showWebsite(withURL: url)
         webcell.titleLabel.text = _title
+        if let e = expandedHeight {
+            webcell.expandedSectionHeight = e
+        }
         super.init(title: _title, rows: [webcell.row], backButton: nil)
         backButtonRow = webcell.row
         webcell.backButton.addTarget(self, action: #selector(JLCSWebSubSection.backButtonPressed(_:)), for: .touchUpInside)
