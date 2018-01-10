@@ -9,7 +9,7 @@ import UIKit
 
 public class JLCSPrebuiltCellView: UIView {
     
-    let requiredHeight:CGFloat = 50
+    var requiredHeight:CGFloat = 50
     private var _row:JLCSRow?
     public var row:JLCSRow {
         get {

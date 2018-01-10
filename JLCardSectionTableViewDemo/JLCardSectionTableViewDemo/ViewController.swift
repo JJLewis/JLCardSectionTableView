@@ -42,6 +42,8 @@ class ViewController: UIViewController {
         web.showWebsite(withURL: URL(string: "http://goonncode.com")!)
         prebuiltsection.addRow(web.row)
         
+        let websection = JLCSWebSection(title: "goonncode section", url: URL(string: "http://goonncode.com")!)
+        
         let account = JLCSSection(title: "Account")
         let updateDetails = JLCSRow(title: "Update Details", decorator:UIImage.JLCSRowDecoratorRightArrow)
         updateDetails.selectedCallback = {
@@ -105,7 +107,7 @@ class ViewController: UIViewController {
         let rateapp = JLCSRow(title: "Rate this app")
         rate.addRow(rateapp)
         
-        table.setTableData([prebuiltsection, account, settings, about, help, rate])
+        table.setTableData([prebuiltsection, websection, account, settings, about, help, rate])
     }
 
     override func didReceiveMemoryWarning() {
