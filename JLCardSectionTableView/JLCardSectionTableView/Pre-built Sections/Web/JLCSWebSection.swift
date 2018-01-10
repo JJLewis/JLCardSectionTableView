@@ -11,6 +11,8 @@ import WebKit
 
 class JLCSWebSectionCell: JLCSWebCell {
     
+    @IBOutlet internal var backButton: UIButton!
+    
     @IBAction override func buttonPressed(_ sender:UIButton) {
         toggleExpand()
     }
@@ -37,7 +39,27 @@ public class JLCSWebSection: JLCSSection {
     let webcell:JLCSWebSectionCell = JLCSWebSectionCell.instanceFromNib()
     
     public init(title _title:String, url:URL) {
+        webcell.backButton.removeFromSuperview()
         webcell.showWebsite(withURL: url)
         super.init(title: _title, rows: [webcell.row])
+    }
+}
+
+public class JLCSWebSubSection: JLCSSubSection {
+    
+    let webcell:JLCSWebSectionCell = JLCSWebSectionCell.instanceFromNib()
+    
+    @objc internal func backButtonPressed(_ sender: UIButton) {
+        if webcell.isExpanded {
+            webcell.toggleExpand()
+        }
+        webcell.row.showParentsectionAction()
+    }
+    
+    public init(title _title:String, url:URL) {
+        webcell.showWebsite(withURL: url)
+        super.init(title: _title, rows: [webcell.row], backButton: nil)
+        backButtonRow = webcell.row
+        webcell.backButton.addTarget(self, action: #selector(JLCSWebSubSection.backButtonPressed(_:)), for: .touchUpInside)
     }
 }

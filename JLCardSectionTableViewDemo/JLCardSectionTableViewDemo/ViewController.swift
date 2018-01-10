@@ -100,8 +100,10 @@ class ViewController: UIViewController {
         about.addRow(aboutthisapp)
         
         let help = JLCSSection(title: "Help & Support")
-        let gethelp = JLCSRow(title: "Get help/support")
+        let gethelp = JLCSRow(title: "Get help/support", decorator: UIImage.JLCSRowDecoratorRightArrow)
         help.addRow(gethelp)
+        let websubsection = JLCSWebSubSection(title: "goonncode.com", url: URL(string:"http://goonncode.com")!)
+        gethelp.setSubsection(section: websubsection)
         
         let rate = JLCSSection(title: "Rate")
         let rateapp = JLCSRow(title: "Rate this app")

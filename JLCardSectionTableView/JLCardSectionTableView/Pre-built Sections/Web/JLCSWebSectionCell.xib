@@ -23,8 +23,15 @@
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="bDb-fD-HQg">
                             <rect key="frame" x="10" y="0.0" width="355" height="50"/>
                             <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ss-XM-PXm">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="8Ss-XM-PXm" secondAttribute="height" multiplier="1:1" id="6Hb-4n-AB9"/>
+                                    </constraints>
+                                    <state key="normal" title="Button" image="left_arrow"/>
+                                </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="71e-I5-f5z">
-                                    <rect key="frame" x="0.0" y="0.0" width="42" height="50"/>
+                                    <rect key="frame" x="156.5" y="0.0" width="42" height="50"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -86,6 +93,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="cYE-K3-Z4Y"/>
             <connections>
+                <outlet property="backButton" destination="8Ss-XM-PXm" id="BeR-Tk-bhZ"/>
                 <outlet property="button" destination="DX4-2C-BOJ" id="nAy-ac-46f"/>
                 <outlet property="expandedHeightConstraint" destination="4pi-10-dvA" id="un5-CW-1Fh"/>
                 <outlet property="expandedView" destination="gvO-X4-lHl" id="876-0f-AJ3"/>
@@ -98,6 +106,7 @@
         </view>
     </objects>
     <resources>
+        <image name="left_arrow" width="25" height="25"/>
         <image name="vertical_expand" width="25" height="25"/>
     </resources>
 </document>
