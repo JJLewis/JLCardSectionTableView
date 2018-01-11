@@ -26,7 +26,7 @@ private class JLCSRowDefault {
     }
 }
 
-public class JLCSSubSection:JLCSSection {
+open class JLCSSubSection:JLCSSection {
     private var _backButtonRow:JLCSRow?
     private var automadeBackRow:Bool = false
     public var backButtonRow:JLCSRow {
@@ -92,7 +92,7 @@ public class JLCSSubSection:JLCSSection {
     }
 }
 
-public class JLCSRow {
+open class JLCSRow {
     let view:UIView
     public var height:CGFloat = 50
     public var selectedCallback:()->() = {}
@@ -118,7 +118,7 @@ public class JLCSRow {
     }
 }
 
-public class JLCSSection {
+open class JLCSSection {
     public let title:String!
     fileprivate var rows:[JLCSRow] = []
     public var numberOfRows:Int {
