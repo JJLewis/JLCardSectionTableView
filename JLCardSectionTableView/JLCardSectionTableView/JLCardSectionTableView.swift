@@ -37,9 +37,26 @@ public class JLCardSectionTableView: UITableView, UITableViewDelegate, UITableVi
         }
     }
     
+    private func shrinkRowIfRequired(_ row:JLCSRow) {
+        if let expandingRow = row.view as? JLCSExpandingCell {
+            if expandingRow.shouldShrinkOnSectionChange {
+                expandingRow.shrink()
+            }
+        }
+    }
+    
+    private func sectionChangingFor(indexPath:IndexPath) {
+        let currentSection = data[indexPath.section]
+        for i in 0..<currentSection.numberOfRows {
+            let row = currentSection.getRow(i)
+            shrinkRowIfRequired(row)
+        }
+    }
+    
     // MARK: Show and Hide Subsections
     private func goBackFromSubsectionFor(row:JLCSRow, indexPath:IndexPath) {
         if let parent_section = row.parentsection {
+            sectionChangingFor(indexPath: indexPath)
             data.remove(at: indexPath.section)
             deleteSections(IndexSet(integer: indexPath.section), with: .right)
             data.insert(parent_section, at: indexPath.section)
@@ -54,6 +71,7 @@ public class JLCardSectionTableView: UITableView, UITableViewDelegate, UITableVi
             back.showParentsectionAction = {
                 self.goBackFromSubsectionFor(row: back, indexPath: indexPath)
             }
+            sectionChangingFor(indexPath: indexPath)
             data.remove(at: indexPath.section)
             deleteSections(IndexSet(integer: indexPath.section), with: .left)
             data.insert(new_section, at: indexPath.section)

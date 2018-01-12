@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class JLCSPrebuiltCellView: UIView {
+open class JLCSPrebuiltCellView: UIView {
     
     var requiredHeight:CGFloat = 50
     private var _row:JLCSRow?

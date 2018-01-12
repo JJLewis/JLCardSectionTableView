@@ -8,10 +8,11 @@
 
 import UIKit
 
-public class JLCSExpandingCell: JLCSPrebuiltCellView {
+open class JLCSExpandingCell: JLCSPrebuiltCellView {
 
     public var alternateHeight:CGFloat = 250
     public var shouldPushToTopOnExpand:Bool = false
+    public var shouldShrinkOnSectionChange:Bool = true
     internal var toggleExpandCallback:(CGFloat)->() = {_ in }
     internal var isExpanded:Bool = false
     
@@ -25,13 +26,19 @@ public class JLCSExpandingCell: JLCSPrebuiltCellView {
         isExpanded = !isExpanded
     }
     
+    internal func shrink() {
+        if isExpanded {
+            toggleExpand()
+        }
+    }
+    
     internal func setExpandingConstraints() {
         minimisedHeightConstraint.constant = requiredHeight
         expandedHeightConstraint.constant = alternateHeight - requiredHeight
         updateConstraintsIfNeeded()
     }
     
-    public override func awakeFromNib() {
+    open override func awakeFromNib() {
         super.awakeFromNib()
         setExpandingConstraints()
     }
