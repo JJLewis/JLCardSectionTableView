@@ -57,10 +57,12 @@ public class JLCardSectionTableView: UITableView, UITableViewDelegate, UITableVi
     private func goBackFromSubsectionFor(row:JLCSRow, indexPath:IndexPath) {
         if let parent_section = row.parentsection {
             sectionChangingFor(indexPath: indexPath)
+            beginUpdates()
             data.remove(at: indexPath.section)
             deleteSections(IndexSet(integer: indexPath.section), with: .right)
             data.insert(parent_section, at: indexPath.section)
             insertSections(IndexSet(integer: indexPath.section), with: .left)
+            endUpdates()
         }
     }
     
@@ -72,10 +74,12 @@ public class JLCardSectionTableView: UITableView, UITableViewDelegate, UITableVi
                 self.goBackFromSubsectionFor(row: back, indexPath: indexPath)
             }
             sectionChangingFor(indexPath: indexPath)
+            beginUpdates()
             data.remove(at: indexPath.section)
             deleteSections(IndexSet(integer: indexPath.section), with: .left)
             data.insert(new_section, at: indexPath.section)
             insertSections(IndexSet(integer: indexPath.section), with: .right)
+            endUpdates()
         }
     }
     
