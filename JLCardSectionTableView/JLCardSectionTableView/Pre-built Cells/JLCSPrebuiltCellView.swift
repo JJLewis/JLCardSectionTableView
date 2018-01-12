@@ -9,7 +9,7 @@ import UIKit
 
 open class JLCSPrebuiltCellView: UIView {
     
-    var requiredHeight:CGFloat = 50
+    open var requiredHeight:CGFloat = 50
     private var _row:JLCSRow?
     public var row:JLCSRow {
         get {
@@ -23,7 +23,7 @@ open class JLCSPrebuiltCellView: UIView {
         }
     }
     
-    public class func instanceFromNib() -> JLCSPrebuiltCellView {
+    open class func instanceFromNib() -> JLCSPrebuiltCellView {
         return JLCSPrebuiltCellView()
     }
 }
