@@ -31,10 +31,11 @@ public class JLCSPickerCell: JLCSExpandingCell, UIPickerViewDataSource, UIPicker
     
     public func setSelectedIndex(_ index:Int) {
         button.setTitle(pickerOptions[index], for: .normal)
+        picker.selectRow(index, inComponent: 0, animated: true)
     }
     
     public func setSelectedTitle(_ title:String) {
-        button.setTitle(title, for: .normal)
+        setSelectedIndex(pickerOptions.index(of: title)!)
     }
     
     // MARK: UIPickerView Data Source
