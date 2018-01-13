@@ -41,6 +41,9 @@ class ViewController: UIViewController {
         web.titleLabel.text = "jjlewis"
         web.showWebsite(withURL: URL(string: "https://github.com/jjlewis")!)
         prebuiltsection.addRow(web.row)
+        let label = JLCSLabelCell.instanceFromNib()
+        label.titleLabel.text = "Yo Yo this is just a plain label."
+        prebuiltsection.addRow(label.row)
         
         let websection = JLCSWebSection(title: "jjlewis section", url: URL(string: "https://github.com/jjlewis")!)
         

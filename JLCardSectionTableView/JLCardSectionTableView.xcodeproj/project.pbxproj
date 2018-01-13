@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17071EEE2009A1A000A966EF /* JLCSLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17071EED2009A1A000A966EF /* JLCSLabelCell.xib */; };
+		17071EF12009A1B200A966EF /* JLCSLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17071EF02009A1B200A966EF /* JLCSLabelCell.swift */; };
 		1763DEF31FF1DAE200CE97FE /* JLCSTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1763DEF21FF1DAE200CE97FE /* JLCSTableViewCell.swift */; };
 		1763DEF51FF1DBB000CE97FE /* JLCardSectionClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1763DEF41FF1DBB000CE97FE /* JLCardSectionClasses.swift */; };
 		17ACD61920047D9000925962 /* JLCSWebCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17ACD61820047D9000925962 /* JLCSWebCell.swift */; };
@@ -57,6 +59,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17071EED2009A1A000A966EF /* JLCSLabelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JLCSLabelCell.xib; sourceTree = "<group>"; };
+		17071EF02009A1B200A966EF /* JLCSLabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLCSLabelCell.swift; sourceTree = "<group>"; };
 		1763DEF21FF1DAE200CE97FE /* JLCSTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLCSTableViewCell.swift; sourceTree = "<group>"; };
 		1763DEF41FF1DBB000CE97FE /* JLCardSectionClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLCardSectionClasses.swift; sourceTree = "<group>"; };
 		17ACD61820047D9000925962 /* JLCSWebCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLCSWebCell.swift; sourceTree = "<group>"; };
@@ -118,6 +122,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17071EEC2009A18F00A966EF /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				17071EF02009A1B200A966EF /* JLCSLabelCell.swift */,
+				17071EED2009A1A000A966EF /* JLCSLabelCell.xib */,
+			);
+			path = Label;
+			sourceTree = "<group>";
+		};
 		17ACD61720047D3900925962 /* Web */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				AA7BA3981FFCED2200A2F658 /* JLCSPrebuiltCellView.swift */,
+				17071EEC2009A18F00A966EF /* Label */,
 				17ACD61720047D3900925962 /* Web */,
 				AA00CB081FFF0E7200C58320 /* Multi Button */,
 				AA7BA3A11FFD084800A2F658 /* Expanding */,
@@ -439,6 +453,7 @@
 				AAF12A2A1FF0663D007A3799 /* JLRoundedShadowView.xib in Resources */,
 				17ACD61B20047D9C00925962 /* JLCSWebCell.xib in Resources */,
 				AAB637821FFC8ED8008B0C2E /* JLCSSwitchCell.xib in Resources */,
+				17071EEE2009A1A000A966EF /* JLCSLabelCell.xib in Resources */,
 				AAF12A201FF0652E007A3799 /* JLCSBottomTableViewCell.xib in Resources */,
 				17ACD62120049CB300925962 /* JLCSWebSectionCell.xib in Resources */,
 				AAF12A181FF064A9007A3799 /* JLCSTopTableViewCell.xib in Resources */,
@@ -476,6 +491,7 @@
 				17ACD61F2004922200925962 /* JLCSWebSection.swift in Sources */,
 				AAF12A271FF0662B007A3799 /* JLRoundedShadowView.swift in Sources */,
 				17ACD61920047D9000925962 /* JLCSWebCell.swift in Sources */,
+				17071EF12009A1B200A966EF /* JLCSLabelCell.swift in Sources */,
 				AA00CB0A1FFF0E8B00C58320 /* JLCSMultiButtonCell.swift in Sources */,
 				AAF12A0F1FEFE865007A3799 /* JLCardSectionTableView.swift in Sources */,
 				AA7BA3A31FFD084800A2F658 /* JLCSExpandingCell.swift in Sources */,
